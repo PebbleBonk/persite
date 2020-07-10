@@ -1,0 +1,86 @@
+$sectionHeight: 50vh;
+
+.parallax {
+    height: 100%;
+}
+
+.sectionBorder {
+    width: 100%;
+    height: 1rem;
+    display: block;
+}
+
+.section {
+    min-height: $sectionHeight;
+    height: 100%;
+    width: 100vw;
+    display: flex;
+}
+
+.about {
+    background-color: goldenrod;
+    color: #fff;
+}
+
+.featured {
+    background-color: darkblue;
+    color: #fff;
+}
+
+.projects {
+    background-color: rgb(6, 85, 160);
+    color: #fff;
+}
+
+.contact {
+    background-color: darksalmon;
+    color: #fff;
+}
+
+.firstColumn {
+    width: 2rem;
+    flex: 0 0 2rem;
+}
+
+.midColumn {
+    width: 0.5rem;
+    flex: 0 0 0.5rem;
+}
+
+.transparentColumn {
+    width: 0.5rem;
+    flex: 0 0 0.5rem;
+    background-color: transparent;
+}
+
+.contentColumn {
+    box-sizing: border-box;
+    // flex-shrink: 0;
+    width: 100%;
+    padding: 3rem;
+}
+
+
+@media only screen and (max-width: 600px) {
+    /* For mobile phones: */
+    html {
+        font-size: 12px;
+    }
+
+    .firstColumn {
+        width: 1rem;
+        flex: 0 0 1rem;
+    }
+    
+    .midColumn {
+        width: 0.5rem;
+        flex: 0 0 0.5rem;
+    }
+    
+    .transparentColumn {
+        width: 0.5rem;
+        flex: 0 0 0.5rem;
+        background-color: transparent;
+    }
+    
+}
