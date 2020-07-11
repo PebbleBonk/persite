@@ -3,24 +3,25 @@
 }
 
 .header {
-    display: flex;
-    position: sticky;
-    padding: 0.1rem 0 0.1rem;
-    background-color: rgb(109, 34, 0);
+    width: 100vw;;
+    // display: flex;
+    // position: sticky;
+    // padding: 0.1rem 0 0.1rem;
+    // background-color: rgb(109, 34, 0);
 
-    .brand {
-        display: flex;
-        margin: 0;
+    // .brand {
+    //     display: flex;
+    //     margin: 0;
 
-        a {
-            font-size: 2rem;
-        }
-    }
+    //     a {
+    //         font-size: 2rem;
+    //     }
+    // }
 
-    .sections {
-        margin-left: auto;
+    // .sections {
+    //     margin-left: auto;
 
-    }
+    // }
 }
 
 
@@ -43,6 +44,10 @@
     font-size: .9rem;
     margin-right: 1.3rem;
     text-decoration: none;
+}
+
+.nav-item > .active {
+    border-bottom: 1px solid #333;
 }
 
 .nav-item:hover {

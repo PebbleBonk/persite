@@ -3,7 +3,6 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 
 import Section from '../sections/section'
 
-import sectionStyles from '../sections/sections.module.scss'
 import projectsStyles from './projects.module.scss'
 
 const ProjectsSection = (props) => {
@@ -26,10 +25,8 @@ const ProjectsSection = (props) => {
     `) 
 
     return (
-        <Section title={props.title} i_img={props.i_img} style={props.style}>
-            <h2>These are some projects I've been working on.</h2>
-            <h3>Maybe some might interest you</h3>
-            <p>Check out my latest projects</p>
+        <Section title={props.title} id={props.id} img={props.img} style={props.style} solid={props.solid} >
+            {props.children}
 
             <div className={projectsStyles.projects}>
                 {mddata.allMarkdownRemark.edges.map((edge) => {
