@@ -5,7 +5,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 import headerStyles from './header.module.scss'
 
 // from: https://www.digitalocean.com/community/tutorials/how-to-implement-smooth-scrolling-in-react
-import { Link as ScrollLink, animateScroll as scroll } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
 
 
 const Header = (props) => {
@@ -19,8 +19,8 @@ const Header = (props) => {
     if (typeof props.scrollRefs !== 'undefined' ) {
         scrollLinks = props.scrollRefs.map(( {id, slug}) => {
             return (
-                <li>
-                    <ScrollLink key={id} className={headerStyles.navItem} activeClass={headerStyles.activeNavItem} to={slug} spy={true} smooth={true} offset={-0} duration={500} >{id}</ScrollLink>
+                <li key={id}>
+                    <ScrollLink  className={headerStyles.navItem} activeClass={headerStyles.activeNavItem} to={slug} spy={true} smooth={true} offset={-0} duration={500} >{id}</ScrollLink>
                 </li>
             )
         })
