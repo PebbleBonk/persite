@@ -4,6 +4,7 @@ $sectionWidth: 100vw;
 // Basic styles for the section:
 .parallax {
     height: 100%;
+    background-color: darkgreen;
     width: $sectionWidth;
     overflow: hidden;
 }
@@ -39,7 +40,7 @@ $sectionWidth: 100vw;
 // Setting the style for sections with cutout to parallax:
 .sectionBorder {
     visibility: visible;
-    width: 100%;
+    width: 100vw;
     height: 1rem;
 }
 .firstColumn {
@@ -129,14 +130,14 @@ $sectionWidth: 100vw;
     
 }
 
-@media only screen and (min-width: 1210px) {
-    /* For mobile phones: */
-    .parallax {
-        width: 50vw;
-    }
+// @media only screen and (min-width: 1210px) {
+//     /* For mobile phones: */
+//     .parallax {
+//         width: 50vw;
+//     }
     
-    .section {
-        width: 50vw;
-    }
+//     .section {
+//         width: 50vw;
+//     }
     
-}
+// }
