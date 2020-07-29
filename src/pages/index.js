@@ -5,6 +5,7 @@ import Layout from '../components/layout'
 import Head from '../components/head'
 import Section from '../sections/section'
 import ProjectsSection from '../sections/projects'
+import FeaturedSection from '../sections/featured'
 import { RandSet } from '../utilities/utils'
 
 import '../styles/index.scss'
@@ -68,9 +69,9 @@ const IndexPage = () => {
             <p>I like doing weird stuff. A lot of different types of weird stuff.</p>
           </Section>
 
-          <Section title='Featured' id='featured' img={imgs[img_idx[1]]} style={sectionStyles.featured} solid={sectionStyles.solid}>
+          <FeaturedSection title='Featured' id='featured' img={imgs[img_idx[1]]} style={sectionStyles.featured} solid={sectionStyles.solid}>
             <p>These are some projects I could say I am proud of.</p>
-          </Section>
+          </FeaturedSection>
 
           <ProjectsSection title='Projects' id='projects' img={imgs[img_idx[2]]} style={sectionStyles.projects} solid={sectionStyles.transparent}>
             <p>

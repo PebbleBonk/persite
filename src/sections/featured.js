@@ -4,9 +4,9 @@ import Img from "gatsby-image"
 
 import Section from '../sections/section'
 
-import projectsStyles from './projects.module.scss'
+import featuredStyles from './featured.module.scss'
 
-const ProjectsSection = (props) => {
+const FeaturedSection = (props) => {
     const mddata = useStaticQuery(graphql`
     query {
         allMarkdownRemark {
@@ -36,12 +36,12 @@ const ProjectsSection = (props) => {
         <Section title={props.title} id={props.id} img={props.img} style={props.style} solid={props.solid} >
             {props.children}
 
-            <div className={projectsStyles.projects}>
+            <div className={featuredStyles.container}>
                 {mddata.allMarkdownRemark.edges.map((edge) => {
                     const linkto = `/projects/${edge.node.fields.slug}`
                     console.log("PROJECTS:", edge.node.frontmatter.cover)
                     return (
-                        <div className={projectsStyles.project} key={edge.node.frontmatter.title}>
+                        <div className={featuredStyles.featured} key={edge.node.frontmatter.title}>
                             <div>
                                 <Img
                                     fluid={edge.node.frontmatter.cover.childImageSharp.fluid}
@@ -51,10 +51,11 @@ const ProjectsSection = (props) => {
                             </div>
                             <Link to={linkto}>
                                 <div>
-                                    <p>{edge.node.fields.slug}</p>
+                                    <h3>{edge.node.frontmatter.title}</h3>
+                                    <p>{edge.node.frontmatter.date}</p>
                                 </div>
                             </Link>
-                            <div className={projectsStyles.overlay}>
+                            <div className={featuredStyles.overlay}>
                                 </div>
                         </div>
                     )
@@ -64,4 +65,4 @@ const ProjectsSection = (props) => {
     )
 }
 
-export default ProjectsSection;
+export default FeaturedSection;
