@@ -1,16 +1,18 @@
 $sectionHeight: 100vh;
+$sectionWidth: 100vw;
 
 // Basic styles for the section:
 .parallax {
     height: 100%;
-    width: 100vw;
+    width: $sectionWidth;
     overflow: hidden;
 }
 
 .section {
     min-height: $sectionHeight;
+    height: 100%;
     background-color: inherit;
-    width: 100vw;
+    width: $sectionWidth;
     display: flex;
     color: #fff;
 }
@@ -43,16 +45,19 @@ $sectionHeight: 100vh;
 .firstColumn {
     visibility: visible;
     width: 2rem;
+    // height: 100%;
     flex: 0 0 2rem;
 }
 .midColumn {
     visibility: visible;
     width: 0.5rem;
+    // height: 100%;
     flex: 0 0 0.5rem;
 }
 .transparentColumn {
     visibility: visible;
     width: 0.5rem;
+    // height: 100%;
     flex: 0 0 0.5rem;
 }
 .contentColumn {
@@ -60,6 +65,7 @@ $sectionHeight: 100vh;
     visibility: visible;
     box-sizing: border-box;
     width: 100%;
+    // height: 100%;
     padding: 3rem;
     justify-content: center;
     align-items: center;
@@ -119,6 +125,18 @@ $sectionHeight: 100vh;
         width: 0.5rem;
         flex: 0 0 0.5rem;
         background-color: transparent;
+    }
+    
+}
+
+@media only screen and (min-width: 1210px) {
+    /* For mobile phones: */
+    .parallax {
+        width: 50vw;
+    }
+    
+    .section {
+        width: 50vw;
     }
     
 }
