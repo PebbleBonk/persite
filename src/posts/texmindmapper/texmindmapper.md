@@ -1,7 +1,7 @@
 ---
 title: "TexMindMapper - visualise your thesis"
 date: "1.7.2020"
-cover: "./tmm.png"
+cover: ./tmm.png
 ---
 
 ![How beautiful the outside can be](./tmm.png)

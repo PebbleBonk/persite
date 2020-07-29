@@ -14,6 +14,7 @@ module.exports = {
     `gatsby-plugin-fontawesome-css`,
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-sass',
+    'gatsby-image',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -23,6 +24,7 @@ module.exports = {
 
     },
     'gatsby-plugin-sharp',
+    `gatsby-transformer-sharp`,
     {
       resolve: 'gatsby-transformer-remark',
       options: {

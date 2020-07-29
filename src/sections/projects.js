@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
+import Img from "gatsby-image"
 
 import Section from '../sections/section'
 
@@ -14,6 +15,13 @@ const ProjectsSection = (props) => {
                     frontmatter {
                         title
                         date
+                        cover {
+                            childImageSharp {
+                                fluid(maxWidth: 800) {
+                                    ...GatsbyImageSharpFluid
+                                }
+                            }
+                        }
                     }
                     fields {
                         slug
@@ -31,14 +39,24 @@ const ProjectsSection = (props) => {
             <div className={projectsStyles.projects}>
                 {mddata.allMarkdownRemark.edges.map((edge) => {
                     const linkto = `/projects/${edge.node.fields.slug}`
+                    console.log("PROJECTS:", edge.node.frontmatter.cover)
                     return (
                         <div className={projectsStyles.project} key={edge.node.frontmatter.title}>
+                            <div>
+                                <Img
+                                    fluid={edge.node.frontmatter.cover.childImageSharp.fluid}
+                                    objectFit="cover"
+                                    alt="A corgi smiling happily"
+                                />
+                            </div>
                             <Link to={linkto}>
                                 <div>
-                                    <h2>{edge.node.frontmatter.title}</h2>
+                                    <h3>{edge.node.frontmatter.title}</h3>
                                     <p>{edge.node.frontmatter.date}</p>
                                 </div>
                             </Link>
+                            <div className={projectsStyles.overlay}>
+                                </div>
                         </div>
                     )
                 })}
