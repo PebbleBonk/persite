@@ -4,25 +4,27 @@
 
 .header {
     width: 100vw;;
-    // display: flex;
-    // position: sticky;
-    // padding: 0.1rem 0 0.1rem;
-    // background-color: rgb(109, 34, 0);
+    display: flex;
+    position: sticky;
+    padding: 0.1rem 0 0.1rem;
+    background-color: rgb(47, 47, 47);
+    top: 0;
+    z-index: 100; /* this is optional and should be different for every project */
+    .brand {
+        display: flex;
+        margin: 0;
 
-    // .brand {
-    //     display: flex;
-    //     margin: 0;
+        a {
+            font-size: 2rem;
+        }
+    }
 
-    //     a {
-    //         font-size: 2rem;
-    //     }
-    // }
+    .sections {
+        margin-left: auto;
 
-    // .sections {
-    //     margin-left: auto;
-
-    // }
+    }
 }
+
 
 
 .title {
@@ -47,7 +49,7 @@
 }
 
 .nav-item > .active {
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid rgb(255, 45, 45);
 }
 
 .nav-item:hover {

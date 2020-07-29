@@ -1,33 +1,51 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, useStaticQuery, graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 import Head from '../components/head'
 import Section from '../sections/section'
 import ProjectsSection from '../sections/projects'
 import { RandSet } from '../utilities/utils'
-import Header from '../components/header'
 
 import '../styles/index.scss'
 import sectionStyles from '../sections/sections.module.scss'
 
 
 const imgs = [
-  'https://live.staticflickr.com/6006/5942800447_6e4822bebb_o_d.jpg',
-  'https://live.staticflickr.com/7142/6707293269_0361acd56c_o_d.jpg',
-  'https://live.staticflickr.com/7149/6708266797_77c096059d_o_d.jpg',
-  'https://live.staticflickr.com/5021/5600476618_92cdd80fd7_o_d.jpg',
-  'https://live.staticflickr.com/7026/6707277175_7aa2cc5f44_o_d.jpg',
-  'https://live.staticflickr.com/7004/6620515997_1c073ce689_o_d.jpg',
-  'https://live.staticflickr.com/6144/5942791055_5cb37613b2_o_d.jpg',
-  'https://live.staticflickr.com/6018/5942786393_29d58c64b8_o_d.jpg',
-  'https://live.staticflickr.com/6011/5942704051_9ae5457fc8_o_d.jpg',
-  'https://live.staticflickr.com/6016/5922083451_7492315f7b_o_d.jpg'
+    'https://live.staticflickr.com/6006/5942800447_6e4822bebb_o_d.jpg',
+    'https://live.staticflickr.com/7142/6707293269_0361acd56c_o_d.jpg',
+    'https://live.staticflickr.com/7149/6708266797_77c096059d_o_d.jpg',
+    'https://live.staticflickr.com/5021/5600476618_92cdd80fd7_o_d.jpg',
+    'https://live.staticflickr.com/7026/6707277175_7aa2cc5f44_o_d.jpg',
+    'https://live.staticflickr.com/7004/6620515997_1c073ce689_o_d.jpg',
+    'https://live.staticflickr.com/6144/5942791055_5cb37613b2_o_d.jpg',
+    'https://live.staticflickr.com/6018/5942786393_29d58c64b8_o_d.jpg',
+    'https://live.staticflickr.com/6011/5942704051_9ae5457fc8_o_d.jpg',
+    'https://live.staticflickr.com/6016/5922083451_7492315f7b_o_d.jpg'
 ]
 
 
 
 const IndexPage = () => {
+//   const imgData = useStaticQuery(graphql`
+//     query {
+//       allFile(
+//         filter: {
+//           extension: {eq: "jpg"}
+//         }) {
+//         edges {
+//           node {
+//             name
+//             extension
+//             dir
+//           }
+//         }
+//       }
+//   }`)
+//   console.log("IMGDATA", imgData)   
+
+//   const imgLol = "C:/Users/Olli/Documents/01_Projects/PerSite/persite/static/img/OR-226.jpg"
+  
   // Randomly select images for the sections:
   const img_idx = RandSet(0, imgs.length-1, 4)
   console.log(img_idx)
@@ -40,9 +58,7 @@ const IndexPage = () => {
   ]
 
   return (
-    <div>
-      <Header scrollRefs={sections}/>
-      <Layout>
+      <Layout scrollRefs={sections}>
         <div className="app">
           <Head title='Home'/>
 
@@ -70,7 +86,6 @@ const IndexPage = () => {
           </Section>
         </div>
       </Layout>
-    </div>
   )
 }
 
