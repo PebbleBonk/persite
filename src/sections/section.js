@@ -1,17 +1,15 @@
 import React from 'react'
-import { Parallax } from 'react-parallax'
+import { Parallax, Background } from 'react-parallax'
 
 import sectionStyles from '../sections/sections.module.scss'
-// const ColorThief = require('colorthief');
 import { usePalette } from 'react-palette';
-
 
 
 const Section = (props) => {
     const { data } = usePalette(props.img)
 
     return (
-        <Parallax  bgImage={props.img} strength={800} contentClassName={sectionStyles.parallax}>
+        <Parallax  bgImage={props.img} strength={800} className={sectionStyles.parallax}>
         <div id={props.id} className={props.solid} style={{ backgroundColor: data.darkVibrant }}>
 
             <div className={sectionStyles.sectionBorder}></div>
@@ -35,6 +33,9 @@ const Section = (props) => {
 
             <div className={sectionStyles.sectionBorder}></div>
         </div>
+        {/* <Background className="custom-bg"> 
+             {props.img}
+        </Background> */}
      </Parallax>
     )
 }
