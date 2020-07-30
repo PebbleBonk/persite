@@ -4,7 +4,6 @@ $sectionWidth: 100vw;
 // Basic styles for the section:
 .parallax {
     height: 100%;
-    background-color: darkgreen;
     width: $sectionWidth;
     overflow: hidden;
 }
@@ -16,6 +15,7 @@ $sectionWidth: 100vw;
     width: $sectionWidth;
     display: flex;
     color: #fff;
+    position: relative;
 }
 
 
@@ -72,6 +72,19 @@ $sectionWidth: 100vw;
     align-items: center;
 }
 
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: visible;
+    padding: 3rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
 .content {
     padding: 3rem;
     box-shadow: 1rem 1rem 2rem rgba(0,0,0,0.5);
