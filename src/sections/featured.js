@@ -39,7 +39,7 @@ const FeaturedSection = (props) => {
             <div className={featuredStyles.container}>
                 {mddata.allMarkdownRemark.edges.map((edge) => {
                     const linkto = `/projects/${edge.node.fields.slug}`
-                    console.log("PROJECTS:", edge.node.frontmatter.cover)
+                    
                     return (
                         <div className={featuredStyles.featured} key={edge.node.frontmatter.title}>
                             <div>
