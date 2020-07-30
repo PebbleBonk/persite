@@ -15,9 +15,10 @@ const ProjectsSection = (props) => {
                     frontmatter {
                         title
                         date
-                        cover {
+                        thumbnail {
+                            name
                             childImageSharp {
-                                fluid(maxWidth: 800) {
+                                fluid(maxWidth: 200) {
                                     ...GatsbyImageSharpFluid
                                 }
                             }
@@ -39,12 +40,12 @@ const ProjectsSection = (props) => {
             <div className={projectsStyles.projects}>
                 {mddata.allMarkdownRemark.edges.map((edge) => {
                     const linkto = `/projects/${edge.node.fields.slug}`
-                    console.log("PROJECTS:", edge.node.frontmatter.cover)
+                    
                     return (
                         <div className={projectsStyles.project} key={edge.node.frontmatter.title}>
                             <div>
                                 <Img
-                                    fluid={edge.node.frontmatter.cover.childImageSharp.fluid}
+                                    fluid={edge.node.frontmatter.thumbnail.childImageSharp.fluid}
                                     objectFit="cover"
                                     alt="A corgi smiling happily"
                                 />

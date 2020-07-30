@@ -2,6 +2,7 @@
 title: "TexMindMapper - visualise your thesis"
 date: "1.7.2020"
 cover: ./tmm.png
+thumbnail: ./tmm_logo.png
 ---
 
 ![How beautiful the outside can be](./tmm.png)
