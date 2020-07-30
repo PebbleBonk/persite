@@ -9,7 +9,7 @@ import projectsStyles from './projects.module.scss'
 const ProjectsSection = (props) => {
     const mddata = useStaticQuery(graphql`
     query {
-        allMarkdownRemark {
+        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(projects)/"  }}) {
             edges {
                 node {
                     frontmatter {
@@ -40,7 +40,7 @@ const ProjectsSection = (props) => {
             <div className={projectsStyles.projects}>
                 {mddata.allMarkdownRemark.edges.map((edge) => {
                     const linkto = `/projects/${edge.node.fields.slug}`
-                    
+
                     return (
                         <div className={projectsStyles.project} key={edge.node.frontmatter.title}>
                             <div>

@@ -9,7 +9,7 @@ import featuredStyles from './featured.module.scss'
 const FeaturedSection = (props) => {
     const mddata = useStaticQuery(graphql`
     query {
-        allMarkdownRemark {
+        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(featured)/"  }}) {
             edges {
                 node {
                     frontmatter {
@@ -39,7 +39,7 @@ const FeaturedSection = (props) => {
             <div className={featuredStyles.container}>
                 {mddata.allMarkdownRemark.edges.map((edge) => {
                     const linkto = `/projects/${edge.node.fields.slug}`
-                    
+
                     return (
                         <div className={featuredStyles.featured} key={edge.node.frontmatter.title}>
                             <div>
