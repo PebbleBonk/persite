@@ -10,7 +10,7 @@ const Section = (props) => {
 
     return (
         <Parallax bgImage={props.img} strength={600} className={sectionStyles.parallax}>
-        <div id={props.id} className={props.solid} style={{ backgroundColor: data.darkVibrant }}>
+        <div id={props.id} className={props.solid} style={{ backgroundColor: data.vibrant }}>
 
                 <div className={sectionStyles.sectionBorder}></div>
 
@@ -23,7 +23,7 @@ const Section = (props) => {
                     <div className={sectionStyles.contentColumn}></div>
 
                     <div className={sectionStyles.container}>
-                        <div className={sectionStyles.content} style={{ backgroundColor: data.vibrant }}>
+                        <div className={sectionStyles.content} style={{ backgroundColor: data.darkMuted }}>
                             <h1>{props.title}</h1>
                             <br/>
                             <div>
