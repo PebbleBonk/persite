@@ -143,14 +143,23 @@ $sectionWidth: 100vw;
     
 }
 
-// @media only screen and (min-width: 1210px) {
-//     /* For mobile phones: */
-//     .parallax {
-//         width: 50vw;
-//     }
-    
-//     .section {
-//         width: 50vw;
-//     }
-    
-// }
+@media only screen and (min-width: 1210px) {
+    /* For mobile phones: */
+    .parallax, .section {
+        width: 50vw;
+    }
+}
+
+@media only screen and (min-width: 1810px) {
+    /* For mobile phones: */
+    .parallax, .section {
+        width: 33.3vw;
+    }
+}
+
+@media only screen and (min-width: 2410px) {
+    /* For mobile phones: */
+    .parallax, .section {
+        width: 25vw;
+    }
+}
