@@ -18,6 +18,14 @@ $sectionWidth: 100vw;
     position: relative;
 }
 
+.blended {
+    background-color: rgba(0, 174, 255, 0.623);
+    background-blend-mode: exclusion;
+    background-size: cover;
+    resize: both;
+    // width: 3000px;
+    // height: 2000px;
+  }
 
 // Colour options. Can be overrridden explicitly
 .about {

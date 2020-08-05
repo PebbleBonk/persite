@@ -9,7 +9,7 @@ const Section = (props) => {
     const { data } = usePalette(props.img)
 
     return (
-        <Parallax bgImage={props.img} strength={600} className={sectionStyles.parallax}>
+        <Parallax strength={600} className={sectionStyles.parallax}>
         <div id={props.id} className={props.solid} style={{ backgroundColor: data.vibrant }}>
 
                 <div className={sectionStyles.sectionBorder}></div>
@@ -38,9 +38,10 @@ const Section = (props) => {
                 <div className={sectionStyles.sectionBorder}></div>
 
         </div>
-        {/* <Background className="custom-bg"> 
-             {props.img}
-        </Background> */}
+        <Background>
+            <div style={{backgroundImage: `url(${props.img})`}} className={sectionStyles.blended}>
+            </div> 
+        </Background>
      </Parallax>
     )
 }
