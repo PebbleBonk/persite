@@ -7,10 +7,12 @@ import { usePalette } from 'react-palette';
 
 const Section = (props) => {
     const { data } = usePalette(props.img)
+    const vibrant = data.vibrant;
+    const muted = 'transparent' //data.darkMuted;
 
     return (
         <Parallax strength={600} className={sectionStyles.parallax}>
-        <div id={props.id} className={props.solid} style={{ backgroundColor: data.vibrant }}>
+        <div id={props.id} className={props.solid} style={{ backgroundColor: vibrant }}>
 
                 <div className={sectionStyles.sectionBorder}></div>
 
@@ -23,7 +25,7 @@ const Section = (props) => {
                     <div className={sectionStyles.contentColumn}></div>
 
                     <div className={sectionStyles.container}>
-                        <div className={sectionStyles.content} style={{ backgroundColor: data.darkMuted }}>
+                        <div className={sectionStyles.content} style={{ backgroundColor: muted }}>
                             <h1>{props.title}</h1>
                             <br/>
                             <div>
@@ -38,7 +40,7 @@ const Section = (props) => {
                 <div className={sectionStyles.sectionBorder}></div>
 
         </div>
-        <Background>
+        <Background style={{width: '100%', height: '100%'}}>
             <div style={{backgroundImage: `url(${props.img})`}} className={sectionStyles.blended}>
             </div> 
         </Background>
