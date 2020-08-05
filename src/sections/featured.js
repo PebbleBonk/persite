@@ -9,7 +9,8 @@ import featuredStyles from './featured.module.scss'
 const FeaturedSection = (props) => {
     const mddata = useStaticQuery(graphql`
     query {
-        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(featured)/"  }}) {
+        # (filter: {fileAbsolutePath: {regex: "/(featured)/"  }})
+        allMarkdownRemark {
             edges {
                 node {
                     frontmatter {
