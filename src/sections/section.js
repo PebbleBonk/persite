@@ -41,8 +41,9 @@ const Section = (props) => {
 
         </div>
         <Background style={{width: '100%', height: '100%'}}>
-            <div style={{backgroundImage: `url(${props.img})`}} className={sectionStyles.blended}>
-            </div> 
+            <div className={sectionStyles.blendImgWrapper}>
+                <img src={props.img}/>
+            </div>
         </Background>
      </Parallax>
     )
