@@ -100,7 +100,22 @@ console.log("IMGS", imgs)
           <Section title='About' id='about' img={imgs[img_idx[0]]} style={sectionStyles.about} solid={sectionStyles.transparent}>
             <h2>Hello.</h2>
             <h3>I am Olli, some weird pal</h3>
-            <p>I like doing weird stuff. A lot of different types of weird stuff.</p>
+            <p>I like doing stuff. Different types of stuffs. </p>
+            <p>
+              Ut aliquip commodo mollit quis ad aliqua qui. 
+            </p>
+            <p>
+              Lorem dolore mollit dolor aliqua eu nostrud quis laborum aliquip.<br/>
+              Incididunt officia fugiat cillum ullamco ad adipisicing cupidatat <br/>
+              qui deserunt do irure ad. Laboris ex qui labore duis Lorem tempor 
+            </p>
+            <p>  
+              quis ex sit consectetur in nostrud est ex. Ut enim elit incididunt<br/>
+              dolore deserunt exercitation. Ex adipisicing officia sint irure <br/>
+              nostrud esse pariatur dolor sit. Officia id cillum cillum <br/>
+              voluptate minim ipsum consequat.
+            </p>
+
           </Section>
 
           <FeaturedSection title='Featured' id='featured' img={imgs[img_idx[1]]} style={sectionStyles.featured} solid={sectionStyles.solid}>
