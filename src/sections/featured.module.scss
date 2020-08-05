@@ -1,16 +1,15 @@
-.projects {
+.container {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     margin: 0;
 }
 
-.project {
+.featured {
     box-sizing: border-box;
-    background-color: black;
     margin: 0 1rem 1rem 0;
-    width: 100px;
-    height: 100px;
+    width: 400px;
+    height: 300px;
     background-color: #f4f4f4;
     transition: transform .2s; /* Animation */
     position:relative;
@@ -49,9 +48,9 @@
     }
 
     p {
-        margin: 0;
+        margin-top: 0;
         color: #c8c8c8;
-        font-size: .7rem;
+        font-size: .8rem;
         font-style: italic;
     }
 }
@@ -70,11 +69,18 @@
     pointer-events: none;
   }
 
-.project:hover {
+.featured:hover {
     transform: scale(1.01);
 }
 
-.project:hover .overlay {
+.featured:hover .overlay {
     opacity: 0.5;
 }
 
+@media only screen and (max-width: 600px) {
+    .featured {
+        margin: 1rem;
+        width: 300px;
+        height: 200px;
+    }
+}

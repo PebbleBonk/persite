@@ -3,14 +3,17 @@ import React from 'react'
 import Footer from '../components/footer'
 import Header from '../components/header'
 
-import '../styles/index.scss'
+
 import layoutStyles from './layout.module.scss'
 
 const Layout = (props) => {
+
+    React.Children.map(props.children, child => console.log("CHILD", child))
     return (
         <div className={layoutStyles.container}>
             <div className={layoutStyles.content}>
-                <Header/>
+                <Header scrollRefs={props.scrollRefs}/>
+                
                 {props.children}
             </div>
             <Footer/>

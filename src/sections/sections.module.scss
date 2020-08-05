@@ -1,66 +1,124 @@
-$sectionHeight: 50vh;
+$sectionHeight: 100vh;
+$sectionWidth: 100vw;
 
+// Basic styles for the section:
 .parallax {
     height: 100%;
-}
-
-.sectionBorder {
-    width: 100%;
-    height: 1rem;
-    display: block;
+    width: $sectionWidth;
+    overflow: hidden;
 }
 
 .section {
     min-height: $sectionHeight;
     height: 100%;
-    width: 100vw;
+    background-color: inherit;
+    width: $sectionWidth;
     display: flex;
+    color: #fff;
+    position: relative;
 }
 
+
+// Colour options. Can be overrridden explicitly
 .about {
     background-color: goldenrod;
-    color: #fff;
 }
 
 .featured {
-    background-color: darkblue;
-    color: #fff;
+    background-color: rgb(37, 19, 85);
 }
 
 .projects {
-    background-color: rgb(6, 85, 160);
-    color: #fff;
+    background-color: rgb(28, 142, 177);
 }
 
 .contact {
-    background-color: darksalmon;
-    color: #fff;
+    background-color: rgb(236, 130, 59);
 }
 
+
+// Setting the style for sections with cutout to parallax:
+.sectionBorder {
+    visibility: visible;
+    width: 100vw;
+    height: 1rem;
+}
 .firstColumn {
+    visibility: visible;
     width: 2rem;
+    // height: 100%;
     flex: 0 0 2rem;
 }
-
 .midColumn {
+    visibility: visible;
     width: 0.5rem;
+    // height: 100%;
     flex: 0 0 0.5rem;
 }
-
 .transparentColumn {
+    visibility: visible;
     width: 0.5rem;
+    // height: 100%;
     flex: 0 0 0.5rem;
-    background-color: transparent;
 }
-
 .contentColumn {
+    display: flex;
+    visibility: visible;
     box-sizing: border-box;
-    // flex-shrink: 0;
     width: 100%;
+    // height: 100%;
     padding: 3rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    visibility: visible;
+    padding: 3rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.content {
+    padding: 3rem;
+    box-shadow: 1rem 1rem 2rem rgba(0,0,0,0.5);
 }
 
 
+// The two options: transparent or solid background:
+.transparent {
+    visibility: hidden;
+
+    .sectionBorder, .firstColumn, .midColumn, .contentColumn{
+        background-color: transparent;
+    }
+
+    .transparentColumn {
+        background-color: inherit;
+    }
+}
+
+.solid {
+    visibility: hidden;
+
+    .sectionBorder, .firstColumn, .midColumn, .contentColumn{
+        background-color: inherit;
+    }
+
+    .transparentColumn {
+        background-color:transparent;
+    }
+}
+
+
+
+// Breakpoints for mobile devices:
 @media only screen and (max-width: 600px) {
     /* For mobile phones: */
     html {
@@ -83,4 +141,25 @@ $sectionHeight: 50vh;
         background-color: transparent;
     }
     
+}
+
+@media only screen and (min-width: 1210px) {
+    /* For mobile phones: */
+    .parallax, .section {
+        width: 50vw;
+    }
+}
+
+@media only screen and (min-width: 1810px) {
+    /* For mobile phones: */
+    .parallax, .section {
+        width: 33.3vw;
+    }
+}
+
+@media only screen and (min-width: 2410px) {
+    /* For mobile phones: */
+    .parallax, .section {
+        width: 25vw;
+    }
 }

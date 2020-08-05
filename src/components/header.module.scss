@@ -3,11 +3,13 @@
 }
 
 .header {
+    width: 100vw;;
     display: flex;
     position: sticky;
     padding: 0.1rem 0 0.1rem;
-    background-color: rgb(109, 34, 0);
-
+    background-color: rgb(47, 47, 47);
+    top: 0;
+    z-index: 100; /* this is optional and should be different for every project */
     .brand {
         display: flex;
         margin: 0;
@@ -22,6 +24,7 @@
 
     }
 }
+
 
 
 .title {
@@ -43,6 +46,10 @@
     font-size: .9rem;
     margin-right: 1.3rem;
     text-decoration: none;
+}
+
+.nav-item > .active {
+    border-bottom: 1px solid rgb(255, 45, 45);
 }
 
 .nav-item:hover {

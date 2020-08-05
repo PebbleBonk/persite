@@ -1,7 +1,8 @@
 ---
 title: "CropperHead - auto cropper AI"
 date: "1.6.2020"
-cover: "./tmm.png"
+cover: ch_train.png
+thumbnail: cropperHead.png
 ---
 
 This'll be some nice little post about a neural network
