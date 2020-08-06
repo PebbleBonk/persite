@@ -9,7 +9,8 @@ import projectsStyles from './projects.module.scss'
 const ProjectsSection = (props) => {
     const mddata = useStaticQuery(graphql`
     query {
-        allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(projects)/"  }}) {
+        # (filter: {fileAbsolutePath: {regex: "/(projects)/"}})
+        allMarkdownRemark  {
             edges {
                 node {
                     frontmatter {
