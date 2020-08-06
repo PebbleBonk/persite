@@ -99,7 +99,7 @@ console.log("IMGS", imgs)
 
           <Section title='About' id='about' img={imgs[img_idx[0]]} style={sectionStyles.about} solid={sectionStyles.transparent}>
             <h2>Hello.</h2>
-            <h3>I am Olli, some weird pal</h3>
+            <h3>I am Olli</h3>
             <p>I like doing stuff. Different types of stuffs. </p>
             <p>
               Ut aliquip commodo mollit quis ad aliqua qui. 

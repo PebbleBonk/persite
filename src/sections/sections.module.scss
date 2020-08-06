@@ -1,7 +1,8 @@
 $sectionHeight: 100vh;
 $sectionWidth: 100vw;
-$backgroundColor: #7702ad; // rgba(0, 174, 255, 0.623);
-$sectionColor: #243278; //
+$backgroundColor: #004879; // rgba(0, 174, 255, 0.623);
+$sectionColor: #252525; //
+$textColor: white;
 
 
 // Basic styles for the section:
@@ -17,7 +18,7 @@ $sectionColor: #243278; //
     background-color: inherit;
     width: $sectionWidth;
     display: flex;
-    color: #fff;
+    color: $textColor;
     position: relative;
 }
 
@@ -29,24 +30,6 @@ $sectionColor: #243278; //
 .blendImgWrapper img {
     mix-blend-mode: exclusion;
     filter: grayscale(100%);
-}
-
-
-// Colour options. Can be overrridden explicitly
-.about {
-    background-color: goldenrod;
-}
-
-.featured {
-    background-color: rgb(37, 19, 85);
-}
-
-.projects {
-    background-color: rgb(28, 142, 177);
-}
-
-.contact {
-    background-color: rgb(236, 130, 59);
 }
 
 
