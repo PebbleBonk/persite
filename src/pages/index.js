@@ -52,7 +52,7 @@ query {
   allFile(
     filter: {
       extension: { regex: "/(jpg)|(png)|(jpeg)/" }
-      relativeDirectory: { eq: "background_images_BW" }
+      relativeDirectory: { eq: "background_images" }
     }
   ) {
     edges {

@@ -1,5 +1,8 @@
 $sectionHeight: 100vh;
 $sectionWidth: 100vw;
+$backgroundColor: #7702ad; // rgba(0, 174, 255, 0.623);
+$sectionColor: #243278; //
+
 
 // Basic styles for the section:
 .parallax {
@@ -19,7 +22,7 @@ $sectionWidth: 100vw;
 }
 
 .blendImgWrapper {
-    background: rgba(0, 174, 255, 0.623);
+    background: $backgroundColor;
     display: inline-block;
 }
 
@@ -106,6 +109,7 @@ $sectionWidth: 100vw;
 // The two options: transparent or solid background:
 .transparent {
     visibility: hidden;
+    background-color: $sectionColor;
 
     .sectionBorder, .firstColumn, .midColumn, .contentColumn{
         background-color: transparent;
@@ -118,6 +122,7 @@ $sectionWidth: 100vw;
 
 .solid {
     visibility: hidden;
+    background-color: $sectionColor;
 
     .sectionBorder, .firstColumn, .midColumn, .contentColumn{
         background-color: inherit;

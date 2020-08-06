@@ -7,12 +7,14 @@ import { usePalette } from 'react-palette';
 
 const Section = (props) => {
     const { data } = usePalette(props.img)
-    const vibrant = data.vibrant;
+    const sectionColourStyle = {
+        // backgroundColor: data.vibrant
+    }
     const muted = 'transparent' //data.darkMuted;
 
     return (
         <Parallax strength={600} className={sectionStyles.parallax}>
-        <div id={props.id} className={props.solid} style={{ backgroundColor: vibrant }}>
+        <div id={props.id} className={props.solid} style={sectionColourStyle}>
 
                 <div className={sectionStyles.sectionBorder}></div>
 
