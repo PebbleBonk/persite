@@ -37,30 +37,35 @@ const FeaturedSection = (props) => {
         <Section title={props.title} id={props.id} img={props.img} style={props.style} solid={props.solid} >
             {props.children}
 
-            <div className={featuredStyles.container}>
+            <div className={featuredStyles.projectContainer}>
+                {/* <ul> */}
+
                 {mddata.allMarkdownRemark.edges.map((edge) => {
                     const linkto = `/projects/${edge.node.fields.slug}`
-
+                    
                     return (
-                        <div className={featuredStyles.featured} key={edge.node.frontmatter.title}>
-                            <div>
-                                <Img
-                                    fluid={edge.node.frontmatter.cover.childImageSharp.fluid}
-                                    objectFit="cover"
-                                    alt="A corgi smiling happily"
-                                />
-                            </div>
-                            <Link to={linkto}>
+
+                            <div className={featuredStyles.featured} key={edge.node.frontmatter.title}>
                                 <div>
-                                    <h3>{edge.node.frontmatter.title}</h3>
-                                    <p>{edge.node.frontmatter.date}</p>
+                                    <Img
+                                        fluid={edge.node.frontmatter.cover.childImageSharp.fluid}
+                                        objectFit="cover"
+                                        alt="A corgi smiling happily"
+                                        />
                                 </div>
-                            </Link>
-                            <div className={featuredStyles.overlay}>
-                                </div>
-                        </div>
+                                <Link to={linkto}>
+                                    <div>
+                                        <h3>{edge.node.frontmatter.title}</h3>
+                                        <p>{edge.node.frontmatter.date}</p>
+                                    </div>
+                                </Link>
+                                <div className={featuredStyles.overlay}>
+                                    </div>
+                            </div>
                     )
                 })}
+                
+                {/* </ul> */}
             </div>  
         </Section>
     )
