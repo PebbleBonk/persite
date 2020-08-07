@@ -37,6 +37,24 @@ $textColor: white;
     display: flex;
     color: $textColor;
     position: relative;
+    z-index: 0;
+}
+
+.sectionContent {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    margin-left: -100%;
+    color: $textColor;
+    visibility: visible;
+    padding: 3rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .blendImgWrapper {
@@ -86,22 +104,7 @@ $textColor: white;
     align-items: center;
 }
 
-.sectionContent {
-    position: absolute;
-    top: 0;
-    left: 0;
-    
-    color: $textColor;
-    visibility: visible;
-    padding: 3rem;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    
-}
+
 .content {
     padding: 3rem;
     // box-shadow: 1rem 1rem 2rem rgba(0,0,0,0.5);
