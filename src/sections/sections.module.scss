@@ -1,5 +1,5 @@
 $sectionHeight: 100vh;
-$navbar-height: 50px;
+$navbar-height: 60px;
 $sectionBorderHeight: 25px; 
 $sectionWidth: 100vw;
 $backgroundColor: #004879;
@@ -19,7 +19,17 @@ $textColor: white;
     height: 100%;
 }
 
-.sectionContent {
+.sectionWrapper {
+    // min-height: calc(#{$sectionHeight} - #{$navbar-height} - 2*#{$sectionBorderHeight});
+
+    // background-color: inherit;
+    // width: $sectionWidth;
+    display: flex;
+    // color: $textColor;
+    // position: relative;
+}
+
+.sectionBackground {
     min-height: calc(#{$sectionHeight} - #{$navbar-height} - 2*#{$sectionBorderHeight});
 
     background-color: inherit;
@@ -76,10 +86,12 @@ $textColor: white;
     align-items: center;
 }
 
-.container {
+.sectionContent {
     position: absolute;
     top: 0;
     left: 0;
+    
+    color: $textColor;
     visibility: visible;
     padding: 3rem;
     box-sizing: border-box;
@@ -97,33 +109,54 @@ $textColor: white;
 
 
 // The two options: transparent or solid background:
-.transparent .section {
-    visibility: hidden;
-    background-color: $sectionColor;
-
-    .sectionBorder, .firstColumn, .midColumn, .contentColumn {
+.transparent .section  {
+    .sectionBorder {
         background-color: transparent;
     }
+    .sectionWrapper .sectionBackground {
+        visibility: hidden;
+        background-color: $sectionColor;
 
-    .transparentColumn {
-        background-color: inherit;
+        .firstColumn, .midColumn, .contentColumn {
+            background-color: transparent;
+        }
+        
+        .transparentColumn {
+            background-color: inherit;
+        }
     }
 }
 
-.solid .section {
-    visibility: hidden;
-    background-color: $sectionColor;
-
-    .sectionBorder, .firstColumn, .midColumn, .contentColumn {
-        background-color: inherit;
+.solid .section  {
+    .sectionBorder {
+        background-color: $sectionColor;
     }
+    .sectionWrapper .sectionBackground {
+        visibility: hidden;
+        background-color: $sectionColor;
 
-    .transparentColumn {
-        background-color:transparent;
+        .firstColumn, .midColumn, .contentColumn {
+            background-color: inherit;
+        }
+        
+        .transparentColumn {
+            background-color: transparent;
+        }
     }
 }
 
+// .solid .section .sectionWrapper .sectionBackground {
+//     visibility: hidden;
+//     background-color: $sectionColor;
 
+//     .sectionBorder, .firstColumn, .midColumn, .contentColumn {
+//         background-color: inherit;
+//     }
+
+//     .transparentColumn {
+//         background-color:transparent;
+//     }
+// }
 
 // Breakpoints for mobile devices:
 @media only screen and (max-width: 600px) {

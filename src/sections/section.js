@@ -21,16 +21,17 @@ const Section = (props) => {
                     <div className={sectionStyles.sectionBorder}></div>
 
 
-                    <div className={sectionStyles.sectionContent}>
+                    <div className={sectionStyles.sectionWrapper}>
+                        <div className={sectionStyles.sectionBackground}>
+                            <div className={sectionStyles.firstColumn}></div>
+                            <div className={sectionStyles.transparentColumn}></div>
+                            <div className={sectionStyles.midColumn}></div>
+                            <div className={sectionStyles.transparentColumn}></div>
+                            <div className={sectionStyles.contentColumn}></div>
+                        </div>
 
-                        <div className={sectionStyles.firstColumn}></div>
-                        <div className={sectionStyles.transparentColumn}></div>
-                        <div className={sectionStyles.midColumn}></div>
-                        <div className={sectionStyles.transparentColumn}></div>
-                        
-                        <div className={sectionStyles.contentColumn}></div>
 
-                        <div className={sectionStyles.container}> 
+                        <div className={sectionStyles.sectionContent}> 
                             <div className={sectionStyles.content} style={{ backgroundColor: muted }}>
                                 <h1>{props.title}</h1>
                                 <br/>
@@ -41,7 +42,6 @@ const Section = (props) => {
                         </div>
 
                     </div>
-
 
                     <div className={sectionStyles.sectionBorder}></div>
                 </div>
