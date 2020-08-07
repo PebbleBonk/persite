@@ -17,6 +17,11 @@ $textColor: white;
 .section {
     min-height: calc(#{$sectionHeight} - #{$navbar-height} - 2*#{$sectionBorderHeight});
     height: 100%;
+}
+
+.sectionContent {
+    min-height: calc(#{$sectionHeight} - #{$navbar-height} - 2*#{$sectionBorderHeight});
+
     background-color: inherit;
     width: $sectionWidth;
     display: flex;
@@ -92,11 +97,11 @@ $textColor: white;
 
 
 // The two options: transparent or solid background:
-.transparent {
+.transparent .section {
     visibility: hidden;
     background-color: $sectionColor;
 
-    .sectionBorder, .firstColumn, .midColumn, .contentColumn{
+    .sectionBorder, .firstColumn, .midColumn, .contentColumn {
         background-color: transparent;
     }
 
@@ -105,11 +110,11 @@ $textColor: white;
     }
 }
 
-.solid {
+.solid .section {
     visibility: hidden;
     background-color: $sectionColor;
 
-    .sectionBorder, .firstColumn, .midColumn, .contentColumn{
+    .sectionBorder, .firstColumn, .midColumn, .contentColumn {
         background-color: inherit;
     }
 
