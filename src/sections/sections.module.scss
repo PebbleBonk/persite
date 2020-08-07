@@ -1,4 +1,6 @@
 $sectionHeight: 100vh;
+$navbar-height: 50px;
+$sectionBorderHeight: 25px; 
 $sectionWidth: 100vw;
 $backgroundColor: #004879;
 $sectionColor: #3a3939; //
@@ -13,7 +15,7 @@ $textColor: white;
 }
 
 .section {
-    min-height: $sectionHeight;
+    min-height: calc(#{$sectionHeight} - #{$navbar-height} - 2*#{$sectionBorderHeight});
     height: 100%;
     background-color: inherit;
     width: $sectionWidth;
@@ -37,7 +39,7 @@ $textColor: white;
 .sectionBorder {
     visibility: visible;
     width: 100vw;
-    height: 1rem;
+    height: $sectionBorderHeight;
 }
 .firstColumn {
     visibility: visible;
