@@ -11,6 +11,7 @@ import { RandSet } from '../utilities/utils'
 
 import '../styles/index.scss'
 import sectionStyles from '../sections/sections.module.scss'
+import layoutStyles from '../styles/layout.module.scss'
 
 
 // const imgsFlickr = [
@@ -97,24 +98,29 @@ console.log("IMGS", imgs)
         <Head title='Home'/>
         <div className="app">
 
-          <Section title='About' id='about' img={imgs[img_idx[0]]} style={sectionStyles.about} solid={sectionStyles.transparent}>
-            <h2>Hello.</h2>
-            <h3>I am Olli</h3>
-            <p>I like doing stuff. Different types of stuffs. </p>
-            <p>
-              Ut aliquip commodo mollit quis ad aliqua qui. 
-            </p>
-            <p>
-              Lorem dolore mollit dolor aliqua eu nostrud quis laborum aliquip.<br/>
-              Incididunt officia fugiat cillum ullamco ad adipisicing cupidatat <br/>
-              qui deserunt do irure ad. Laboris ex qui labore duis Lorem tempor 
-            </p>
-            <p>  
-              quis ex sit consectetur in nostrud est ex. Ut enim elit incididunt<br/>
-              dolore deserunt exercitation. Ex adipisicing officia sint irure <br/>
-              nostrud esse pariatur dolor sit. Officia id cillum cillum <br/>
-              voluptate minim ipsum consequat.
-            </p>
+          <Section title='' id='about' img={imgs[img_idx[0]]} style={sectionStyles.about} solid={sectionStyles.transparent}>
+            <div className={layoutStyles.centered}>
+              <div>
+
+                <h2>Hello.</h2>
+                <h3>I am Olli</h3>
+                <p>I like doing stuff. Different types of stuffs. </p>
+                <p>
+                  Ut aliquip commodo mollit quis ad aliqua qui. 
+                </p>
+                <p>
+                  Lorem dolore mollit dolor aliqua eu nostrud quis laborum aliquip.<br/>
+                  Incididunt officia fugiat cillum ullamco ad adipisicing cupidatat <br/>
+                  qui deserunt do irure ad. Laboris ex qui labore duis Lorem tempor 
+                </p>
+                <p>  
+                  quis ex sit consectetur in nostrud est ex. Ut enim elit incididunt<br/>
+                  dolore deserunt exercitation. Ex adipisicing officia sint irure <br/>
+                  nostrud esse pariatur dolor sit. Officia id cillum cillum <br/>
+                  voluptate minim ipsum consequat.
+                </p>
+              </div>
+            </div>
 
           </Section>
 
