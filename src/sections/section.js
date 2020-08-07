@@ -6,7 +6,7 @@ import { usePalette } from 'react-palette';
 
 
 const Section = (props) => {
-    const { data } = usePalette(props.img)
+    // const { data } = usePalette(props.img)
     const sectionColourStyle = {
         // backgroundColor: data.vibrant
     }
