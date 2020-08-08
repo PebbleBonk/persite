@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
-// @import "~bootstrap/scss/bootstrap";
 
 html {
     font-family: 'Raleway', sans-serif;
@@ -31,18 +30,10 @@ summary {
 
 // Personal:
 .app {
-    // padding-top: 55px; 
     display: grid;
     grid-column-gap: 0;
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
 }
-
-// // Bootstrap magic:
-// /* make the customizations */
-// $theme-colors: (
-//     "info": tomato,
-//     "danger": teal
-// );
 
 
 a {

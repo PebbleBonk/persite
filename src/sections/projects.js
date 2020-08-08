@@ -41,8 +41,6 @@ const ProjectsSection = (props) => {
                     const linkto = `/projects/${edge.node.fields.slug}`
                     
                     return (
-                        // <div >
-
                             <Link to={linkto} className={projectsStyles.project} key={edge.node.frontmatter.title}>
                                 <Img fixed={edge.node.frontmatter.thumbnail.childImageSharp.fixed} alt=""/>
 
@@ -52,7 +50,6 @@ const ProjectsSection = (props) => {
                                 
                                 <div className={projectsStyles.overlay}></div>
                             </Link>
-                        // </div>
                     )
                 })}
             </div>  

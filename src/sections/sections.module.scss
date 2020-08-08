@@ -20,13 +20,7 @@ $textColor: white;
 }
 
 .sectionWrapper {
-    // min-height: calc(#{$sectionHeight} - #{$navbar-height} - 2*#{$sectionBorderHeight});
-
-    // background-color: inherit;
-    // width: $sectionWidth;
     display: flex;
-    // color: $textColor;
-    // position: relative;
 }
 
 .sectionBackground {
@@ -41,18 +35,11 @@ $textColor: white;
 }
 
 .sectionContent {
-    // position: absolute;
-    // top: 0;
-    // left: 0;
     margin-left: -100%;
     color: $textColor;
     visibility: visible;
     padding: 3rem;
     box-sizing: border-box;
-
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
 
     width: 100%;
     height: 100%;
@@ -150,18 +137,6 @@ $textColor: white;
     }
 }
 
-// .solid .section .sectionWrapper .sectionBackground {
-//     visibility: hidden;
-//     background-color: $sectionColor;
-
-//     .sectionBorder, .firstColumn, .midColumn, .contentColumn {
-//         background-color: inherit;
-//     }
-
-//     .transparentColumn {
-//         background-color:transparent;
-//     }
-// }
 
 // Breakpoints for mobile devices:
 @media only screen and (max-width: 600px) {
