@@ -17,8 +17,8 @@ const ProjectsSection = (props) => {
                         thumbnail {
                             name
                             childImageSharp {
-                                fluid(maxWidth: 200) {
-                                    ...GatsbyImageSharpFluid
+                                fixed(width: 100) {
+                                    ...GatsbyImageSharpFixed
                                 }
                             }
                         }
@@ -41,22 +41,18 @@ const ProjectsSection = (props) => {
                     const linkto = `/projects/${edge.node.fields.slug}`
                     
                     return (
-                        <div className={projectsStyles.project} key={edge.node.frontmatter.title}>
-                            <div>
-                                <Img
-                                    fluid={edge.node.frontmatter.thumbnail.childImageSharp.fluid}
-                                    objectFit="cover"
-                                    alt="A corgi smiling happily"
-                                    />
-                            </div>
-                            <Link to={linkto}>
-                                <div>
+                        // <div >
+
+                            <Link to={linkto} className={projectsStyles.project} key={edge.node.frontmatter.title}>
+                                <Img fixed={edge.node.frontmatter.thumbnail.childImageSharp.fixed} alt=""/>
+
+                                <div className={projectsStyles.projectTag}>
                                     <p>{edge.node.fields.slug}</p>
                                 </div>
+                                
+                                <div className={projectsStyles.overlay}></div>
                             </Link>
-                            <div className={projectsStyles.overlay}>
-                                </div>
-                        </div>
+                        // </div>
                     )
                 })}
             </div>  

@@ -44,22 +44,21 @@ const FeaturedSection = (props) => {
                     return (
                         
                         <div className={featuredStyles.featured} key={edge.node.frontmatter.title}>
+                            {/* <div> */}
+                                <Img
+                                    fluid={edge.node.frontmatter.cover.childImageSharp.fluid}
+                                    objectFit="cover"
+                                    alt="A corgi smiling happily"
+                                />
+                            {/* </div> */}
+                            <Link to={linkto}>
                                 <div>
-                                    <Img
-                                        fluid={edge.node.frontmatter.cover.childImageSharp.fluid}
-                                        objectFit="cover"
-                                        alt="A corgi smiling happily"
-                                        />
+                                    <h3>{edge.node.frontmatter.title}</h3>
+                                    <p>{edge.node.frontmatter.date}</p>
                                 </div>
-                                <Link to={linkto}>
-                                    <div>
-                                        <h3>{edge.node.frontmatter.title}</h3>
-                                        <p>{edge.node.frontmatter.date}</p>
-                                    </div>
-                                </Link>
-                                <div className={featuredStyles.overlay}>
-                                    </div>
-                            </div>
+                            </Link>
+                            <div className={featuredStyles.overlay}></div>
+                        </div>
                     )
                 })}
             </div>  
