@@ -1,4 +1,6 @@
 $sectionHeight: 100vh;
+$navbar-height: 60px;
+$sectionBorderHeight: 25px; 
 $sectionWidth: 100vw;
 $backgroundColor: #004879;
 $sectionColor: #3a3939; //
@@ -13,13 +15,48 @@ $textColor: white;
 }
 
 .section {
-    min-height: $sectionHeight;
+    min-height: calc(#{$sectionHeight} - #{$navbar-height} - 2*#{$sectionBorderHeight});
     height: 100%;
+}
+
+.sectionWrapper {
+    // min-height: calc(#{$sectionHeight} - #{$navbar-height} - 2*#{$sectionBorderHeight});
+
+    // background-color: inherit;
+    // width: $sectionWidth;
+    display: flex;
+    // color: $textColor;
+    // position: relative;
+}
+
+.sectionBackground {
+    min-height: calc(#{$sectionHeight} - #{$navbar-height} - 2*#{$sectionBorderHeight});
+
     background-color: inherit;
     width: $sectionWidth;
     display: flex;
     color: $textColor;
     position: relative;
+    z-index: 0;
+}
+
+.sectionContent {
+    // position: absolute;
+    // top: 0;
+    // left: 0;
+    margin-left: -100%;
+    color: $textColor;
+    visibility: visible;
+    padding: 3rem;
+    box-sizing: border-box;
+
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+
+    width: 100%;
+    height: 100%;
+    z-index: 1;
 }
 
 .blendImgWrapper {
@@ -37,7 +74,7 @@ $textColor: white;
 .sectionBorder {
     visibility: visible;
     width: 100vw;
-    height: 1rem;
+    height: $sectionBorderHeight;
 }
 .firstColumn {
     visibility: visible;
@@ -69,20 +106,7 @@ $textColor: white;
     align-items: center;
 }
 
-.container {
-    position: absolute;
-    top: 0;
-    left: 0;
-    visibility: visible;
-    padding: 3rem;
-    box-sizing: border-box;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    
-}
+
 .content {
     padding: 3rem;
     // box-shadow: 1rem 1rem 2rem rgba(0,0,0,0.5);
@@ -90,33 +114,54 @@ $textColor: white;
 
 
 // The two options: transparent or solid background:
-.transparent {
-    visibility: hidden;
-    background-color: $sectionColor;
-
-    .sectionBorder, .firstColumn, .midColumn, .contentColumn{
+.transparent .section  {
+    .sectionBorder {
         background-color: transparent;
     }
+    .sectionWrapper .sectionBackground {
+        visibility: hidden;
+        background-color: $sectionColor;
 
-    .transparentColumn {
-        background-color: inherit;
+        .firstColumn, .midColumn, .contentColumn {
+            background-color: transparent;
+        }
+        
+        .transparentColumn {
+            background-color: inherit;
+        }
     }
 }
 
-.solid {
-    visibility: hidden;
-    background-color: $sectionColor;
-
-    .sectionBorder, .firstColumn, .midColumn, .contentColumn{
-        background-color: inherit;
+.solid .section  {
+    .sectionBorder {
+        background-color: $sectionColor;
     }
+    .sectionWrapper .sectionBackground {
+        visibility: hidden;
+        background-color: $sectionColor;
 
-    .transparentColumn {
-        background-color:transparent;
+        .firstColumn, .midColumn, .contentColumn {
+            background-color: inherit;
+        }
+        
+        .transparentColumn {
+            background-color: transparent;
+        }
     }
 }
 
+// .solid .section .sectionWrapper .sectionBackground {
+//     visibility: hidden;
+//     background-color: $sectionColor;
 
+//     .sectionBorder, .firstColumn, .midColumn, .contentColumn {
+//         background-color: inherit;
+//     }
+
+//     .transparentColumn {
+//         background-color:transparent;
+//     }
+// }
 
 // Breakpoints for mobile devices:
 @media only screen and (max-width: 600px) {

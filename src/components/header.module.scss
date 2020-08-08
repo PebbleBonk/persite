@@ -3,15 +3,19 @@
 }
 
 .header {
+    height: 50px;
     width: 100vw;;
     display: flex;
     position: sticky;
-    padding: 0.1rem 0 0.1rem;
+    padding: 0 0 0.1rem;
     background-color: rgb(47, 47, 47);
     top: 0;
     z-index: 100; /* this is optional and should be different for every project */
+    
     .brand {
         display: flex;
+        justify-content: center;
+        align-items: center;
         margin: 0;
 
         a {

@@ -20,7 +20,9 @@ const Header = (props) => {
         scrollLinks = props.scrollRefs.map(( {id, slug}) => {
             return (
                 <li key={id}>
-                    <ScrollLink  className={headerStyles.navItem} activeClass={headerStyles.activeNavItem} to={slug} spy={true} smooth={true} offset={-0} duration={500} >{id}</ScrollLink>
+                    <ScrollLink className={headerStyles.navItem} activeClass={headerStyles.activeNavItem}
+                                to={slug} spy={true} smooth={true} offset={-50} duration={500} >{id}
+                    </ScrollLink>
                 </li>
             )
         })
