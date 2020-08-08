@@ -86,7 +86,6 @@ console.log("IMGS", imgs)
 
   const sections = [
     {id: 'About', slug: 'about'},
-    {id: 'Featured', slug: 'featured'},
     {id: 'Projects', slug: 'projects'},
     {id: 'Contact', slug: 'contact'}
   ]
