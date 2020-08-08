@@ -40,62 +40,60 @@ const IndexPage = () => {
         }
         `)
         
-        const imgs = imD.allFile.edges.map(image => {
-            return image.node.publicURL
-            //  <Img
-            //           fluid={image.node.childImageSharp.fluid}
-            //           alt={image.node.base.split(".")[0]} // only use section of the file extension with the filename
-            //         />
-        })
-        
-        
-        // Randomly select images for the sections:
-        const img_idx = RandSet(0, imgs.length-1, 4)
-        
-        const sections = [
-            {id: 'About', slug: 'about'},
-            {id: 'Projects', slug: 'projects'},
-            {id: 'Contact', slug: 'contact'}
-        ]
-        
-        
-        
-        return (
-            <Layout scrollRefs={sections}> 
-                <Head title='Home'/>
-                <div className="app">
+    const imgs = imD.allFile.edges.map(image => {
+        return image.node.publicURL
+        //  <Img
+        //           fluid={image.node.childImageSharp.fluid}
+        //           alt={image.node.base.split(".")[0]} // only use section of the file extension with the filename
+        //         />
+    })
+    
+    
+    // Randomly select images for the sections:
+    const img_idx = RandSet(0, imgs.length-1, 4)
+    
+    const sections = [
+        {id: 'About', slug: 'about'},
+        {id: 'Projects', slug: 'projects'},
+        {id: 'Contact', slug: 'contact'}
+    ]
+
+    return (
+        <Layout scrollRefs={sections}> 
+            <Head title='Home'/>
+            <div className="app">
+            
+                <Section title='' id='about' img={imgs[img_idx[0]]} style={sectionStyles.about} 
+                        solid={sectionStyles.transparent} contentStyle={layoutStyles.centered}>
                 
-                    <Section title='' id='about' img={imgs[img_idx[0]]} style={sectionStyles.about} 
-                            solid={sectionStyles.transparent} contentStyle={layoutStyles.centered}>
-                    
-                        <h2 className={layoutStyles.fadedIn}>Hello.</h2>
-                        <h3 className={layoutStyles.fadedIn}>I am Olli</h3>
-                        <div className={layoutStyles.fadedIn}>
-                            <p>I like doing stuff. Different types of stuffs. </p>
-                            <p>
-                            Ut aliquip commodo mollit quis ad aliqua qui. 
-                            </p>
-                            <p>
-                            Lorem dolore mollit dolor aliqua eu nostrud quis laborum aliquip.<br/>
-                            Incididunt officia fugiat cillum ullamco ad adipisicing cupidatat <br/>
-                            qui deserunt do irure ad. Laboris ex qui labore duis Lorem tempor 
-                            </p>
-                            <p>  
-                            quis ex sit consectetur in nostrud est ex. Ut enim elit incididunt<br/>
-                            dolore deserunt exercitation. Ex adipisicing officia sint irure <br/>
-                            nostrud esse pariatur dolor sit. Officia id cillum cillum <br/>
-                            voluptate minim ipsum consequat.
-                            </p>
-                        </div>
-                    
-                    </Section>
-                    
-                    {/* <Section title='Featured' id='featured' img={imgs[img_idx[1]]} style={sectionStyles.featured} solid={sectionStyles.solid}>
-                    <FeaturedSection>
-                    <p>These are some projects I could say I am proud of.</p>
-                    </FeaturedSection>
-                    </Section> */}
+                    <h2 className={layoutStyles.fadedIn}>Hello.</h2>
+                    <h3 className={layoutStyles.fadedIn}>I am Olli</h3>
+                    <div className={layoutStyles.fadedIn}>
+                        <p>I like doing stuff. Different types of stuffs. </p>
+                        <p>
+                        Ut aliquip commodo mollit quis ad aliqua qui. 
+                        </p>
+                        <p>
+                        Lorem dolore mollit dolor aliqua eu nostrud quis laborum aliquip.<br/>
+                        Incididunt officia fugiat cillum ullamco ad adipisicing cupidatat <br/>
+                        qui deserunt do irure ad. Laboris ex qui labore duis Lorem tempor 
+                        </p>
+                        <p>  
+                        quis ex sit consectetur in nostrud est ex. Ut enim elit incididunt<br/>
+                        dolore deserunt exercitation. Ex adipisicing officia sint irure <br/>
+                        nostrud esse pariatur dolor sit. Officia id cillum cillum <br/>
+                        voluptate minim ipsum consequat.
+                        </p>
+                    </div>
                 
+                </Section>
+                
+                {/* <Section title='Featured' id='featured' img={imgs[img_idx[1]]} style={sectionStyles.featured} solid={sectionStyles.solid}>
+                <FeaturedSection>
+                <p>These are some projects I could say I am proud of.</p>
+                </FeaturedSection>
+                </Section> */}
+            
                 <Section title='Projects' id='projects' img={imgs[img_idx[2]]} style={sectionStyles.projects} solid={sectionStyles.solid}>
                     <FeaturedSection>
                         <h2>Featured projects</h2>
@@ -109,7 +107,7 @@ const IndexPage = () => {
                         </p>
                     </ProjectsSection>
                 </Section>
-                
+            
                 <Section title='' id='contact' img={imgs[img_idx[3]]} style={sectionStyles.contact} 
                         solid={sectionStyles.transparent} contentStyle={layoutStyles.centered}>
                     <div>
@@ -121,8 +119,8 @@ const IndexPage = () => {
                 </Section>
             </div>
         </Layout>
-        )
-    }
+    )
+}
     
     
-    export default IndexPage
+export default IndexPage
