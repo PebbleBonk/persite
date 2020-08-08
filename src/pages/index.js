@@ -121,19 +121,28 @@ console.log("IMGS", imgs)
 
           </Section>
 
-          <FeaturedSection title='Featured' id='featured' img={imgs[img_idx[1]]} style={sectionStyles.featured} solid={sectionStyles.solid}>
-            <p>These are some projects I could say I am proud of.</p>
-          </FeaturedSection>
+          {/* <Section title='Featured' id='featured' img={imgs[img_idx[1]]} style={sectionStyles.featured} solid={sectionStyles.solid}>
+            <FeaturedSection>
+              <p>These are some projects I could say I am proud of.</p>
+            </FeaturedSection>
+          </Section> */}
 
-          <ProjectsSection title='Projects' id='projects' img={imgs[img_idx[2]]} style={sectionStyles.projects} solid={sectionStyles.transparent}>
-            <p>
-              These are some other projects I've worked on, which might not be so polished, 
-              but still worth checking out
-            </p>
-          </ProjectsSection>
+          <Section title='Projects' id='projects' img={imgs[img_idx[2]]} style={sectionStyles.projects} solid={sectionStyles.solid}>
+            <FeaturedSection>
+              <h2>Featured projects</h2>
+              <p>These are some projects I could say I am proud of.</p>
+            </FeaturedSection>
+            <ProjectsSection>
+              <h2>Misc. projects</h2>
+              <p>
+                These are some other projects I've worked on, which might not be so polished, 
+                but still worth checking out
+              </p>
+            </ProjectsSection>
+          </Section>
 
           <Section title='' id='contact' img={imgs[img_idx[3]]} style={sectionStyles.contact} 
-                   solid={sectionStyles.solid} contentStyle={layoutStyles.centered}>
+                   solid={sectionStyles.transparent} contentStyle={layoutStyles.centered}>
                 <div>
                   <h1>Contact</h1>
                   <h2>Wanna know me better?.</h2>

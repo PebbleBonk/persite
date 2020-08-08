@@ -35,13 +35,13 @@ const ProjectsSection = (props) => {
     `) 
 
     return (
-        <Section title={props.title} id={props.id} img={props.img} style={props.style} solid={props.solid} >
+        <div>
             {props.children}
 
             <div className={projectsStyles.projects}>
                 {mddata.allMarkdownRemark.edges.map((edge) => {
                     const linkto = `/projects/${edge.node.fields.slug}`
-
+                    
                     return (
                         <div className={projectsStyles.project} key={edge.node.frontmatter.title}>
                             <div>
@@ -49,7 +49,7 @@ const ProjectsSection = (props) => {
                                     fluid={edge.node.frontmatter.thumbnail.childImageSharp.fluid}
                                     objectFit="cover"
                                     alt="A corgi smiling happily"
-                                />
+                                    />
                             </div>
                             <Link to={linkto}>
                                 <div>
@@ -62,7 +62,7 @@ const ProjectsSection = (props) => {
                     )
                 })}
             </div>  
-        </Section>
+        </div>
     )
 }
 
