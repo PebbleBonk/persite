@@ -2,8 +2,6 @@ import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 import Img from "gatsby-image"
 
-import Section from '../sections/section'
-
 import featuredStyles from './featured.module.scss'
 
 const FeaturedSection = (props) => {

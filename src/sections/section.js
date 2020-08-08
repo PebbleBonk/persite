@@ -2,7 +2,7 @@ import React from 'react'
 import { Parallax, Background } from 'react-parallax'
 
 import sectionStyles from '../sections/sections.module.scss'
-import { usePalette } from 'react-palette';
+// import { usePalette } from 'react-palette';
 
 
 const Section = (props) => {
