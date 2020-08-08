@@ -34,18 +34,18 @@ const FeaturedSection = (props) => {
     `) 
 
     return (
-        <Section title={props.title} id={props.id} img={props.img} style={props.style} solid={props.solid} >
+        <div>
+
             {props.children}
 
             <div className={featuredStyles.projectContainer}>
-                {/* <ul> */}
 
                 {mddata.allMarkdownRemark.edges.map((edge) => {
                     const linkto = `/projects/${edge.node.fields.slug}`
                     
                     return (
-
-                            <div className={featuredStyles.featured} key={edge.node.frontmatter.title}>
+                        
+                        <div className={featuredStyles.featured} key={edge.node.frontmatter.title}>
                                 <div>
                                     <Img
                                         fluid={edge.node.frontmatter.cover.childImageSharp.fluid}
@@ -64,10 +64,8 @@ const FeaturedSection = (props) => {
                             </div>
                     )
                 })}
-                
-                {/* </ul> */}
             </div>  
-        </Section>
+        </div>
     )
 }
 
