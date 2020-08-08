@@ -43,22 +43,22 @@ const FeaturedSection = (props) => {
                     
                     return (
                         
-                        <div className={featuredStyles.featured} key={edge.node.frontmatter.title}>
+                            <Link to={linkto} className={featuredStyles.featured} key={edge.node.frontmatter.title}>
+                        {/* <div className={featuredStyles.featured} key={edge.node.frontmatter.title}> */}
                             {/* <div> */}
-                                <Img
-                                    fluid={edge.node.frontmatter.cover.childImageSharp.fluid}
-                                    objectFit="cover"
-                                    alt="A corgi smiling happily"
-                                />
-                            {/* </div> */}
-                            <Link to={linkto}>
-                                <div>
-                                    <h3>{edge.node.frontmatter.title}</h3>
-                                    <p>{edge.node.frontmatter.date}</p>
-                                </div>
+                                    <Img
+                                        fluid={edge.node.frontmatter.cover.childImageSharp.fluid}
+                                        objectFit="cover"
+                                        alt="A corgi smiling happily"
+                                    />
+                                {/* </div> */}
+                                    <div className={featuredStyles.projectTag}>
+                                        <h3>{edge.node.frontmatter.title}</h3>
+                                        <p>{edge.node.frontmatter.date}</p>
+                                    </div>
+                                <div className={featuredStyles.overlay}></div>
                             </Link>
-                            <div className={featuredStyles.overlay}></div>
-                        </div>
+                        // </div>
                     )
                 })}
             </div>  
