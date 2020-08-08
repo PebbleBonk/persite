@@ -7,13 +7,6 @@ import { faCopyright } from '@fortawesome/free-solid-svg-icons'
 import footerStyles from './footer.module.scss'
 
 const Footer = () => {
-    // const data = useStaticQuery(graphql`
-    //     query { site { siteMetadata {
-    //         author
-    //         }
-    //     }}
-    // `)
-
     return (
         <footer className={footerStyles.footer}>
             <span><a href='https://github.com/pebblebonk'><FontAwesomeIcon icon={faGithub} /> </a></span>
