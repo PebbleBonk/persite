@@ -2,7 +2,7 @@
 title: "PyTexTree - LaTeX Trees!"
 date: "1.1.2020"
 cover: ./tree.jpg
-thumbnail: ./tree_logo.png
+thumbnail: ./logo.png
 ---
 
 ![How beautiful the outside can be](./tree.jpg)
