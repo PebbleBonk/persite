@@ -98,9 +98,8 @@ console.log("IMGS", imgs)
         <Head title='Home'/>
         <div className="app">
 
-          <Section title='' id='about' img={imgs[img_idx[0]]} style={sectionStyles.about} solid={sectionStyles.transparent}>
-            <div className={layoutStyles.centered}>
-              <div>
+          <Section title='' id='about' img={imgs[img_idx[0]]} style={sectionStyles.about} 
+                   solid={sectionStyles.transparent} contentStyle={layoutStyles.centered}>
 
                 <h2>Hello.</h2>
                 <h3>I am Olli</h3>
@@ -119,8 +118,6 @@ console.log("IMGS", imgs)
                   nostrud esse pariatur dolor sit. Officia id cillum cillum <br/>
                   voluptate minim ipsum consequat.
                 </p>
-              </div>
-            </div>
 
           </Section>
 
@@ -135,10 +132,14 @@ console.log("IMGS", imgs)
             </p>
           </ProjectsSection>
 
-          <Section title='Contact' id='contact' img={imgs[img_idx[3]]} style={sectionStyles.contact} solid={sectionStyles.solid}>
-            <h2>Wanna know me better?.</h2>
-            <h3>Nice</h3>
-            <p>Toss me a message at <Link to='/projects'>myemail (a) contact.com</Link></p>
+          <Section title='' id='contact' img={imgs[img_idx[3]]} style={sectionStyles.contact} 
+                   solid={sectionStyles.solid} contentStyle={layoutStyles.centered}>
+                <div>
+                  <h1>Contact</h1>
+                  <h2>Wanna know me better?.</h2>
+                  <h3>Nice</h3>
+                  <p>Toss me a message at <Link to='/projects'>myemail (a) contact.com</Link></p>
+              </div>
           </Section>
         </div>
       </Layout>

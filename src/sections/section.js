@@ -31,7 +31,7 @@ const Section = (props) => {
                         </div>
 
 
-                        <div className={sectionStyles.sectionContent}> 
+                        <div className={`${sectionStyles.sectionContent} ${props.contentStyle}`}> 
                             <div className={sectionStyles.content} style={{ backgroundColor: muted }}>
                                 <h1>{props.title}</h1>
                                 <br/>
