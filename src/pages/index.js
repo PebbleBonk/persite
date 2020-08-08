@@ -101,23 +101,25 @@ console.log("IMGS", imgs)
           <Section title='' id='about' img={imgs[img_idx[0]]} style={sectionStyles.about} 
                    solid={sectionStyles.transparent} contentStyle={layoutStyles.centered}>
 
-                <h2>Hello.</h2>
-                <h3>I am Olli</h3>
-                <p>I like doing stuff. Different types of stuffs. </p>
-                <p>
-                  Ut aliquip commodo mollit quis ad aliqua qui. 
-                </p>
-                <p>
-                  Lorem dolore mollit dolor aliqua eu nostrud quis laborum aliquip.<br/>
-                  Incididunt officia fugiat cillum ullamco ad adipisicing cupidatat <br/>
-                  qui deserunt do irure ad. Laboris ex qui labore duis Lorem tempor 
-                </p>
-                <p>  
-                  quis ex sit consectetur in nostrud est ex. Ut enim elit incididunt<br/>
-                  dolore deserunt exercitation. Ex adipisicing officia sint irure <br/>
-                  nostrud esse pariatur dolor sit. Officia id cillum cillum <br/>
-                  voluptate minim ipsum consequat.
-                </p>
+                <h2 className={layoutStyles.fadedIn}>Hello.</h2>
+                <h3 className={layoutStyles.fadedIn}>I am Olli</h3>
+                <div className={layoutStyles.fadedIn}>
+                  <p>I like doing stuff. Different types of stuffs. </p>
+                  <p>
+                    Ut aliquip commodo mollit quis ad aliqua qui. 
+                  </p>
+                  <p>
+                    Lorem dolore mollit dolor aliqua eu nostrud quis laborum aliquip.<br/>
+                    Incididunt officia fugiat cillum ullamco ad adipisicing cupidatat <br/>
+                    qui deserunt do irure ad. Laboris ex qui labore duis Lorem tempor 
+                  </p>
+                  <p>  
+                    quis ex sit consectetur in nostrud est ex. Ut enim elit incididunt<br/>
+                    dolore deserunt exercitation. Ex adipisicing officia sint irure <br/>
+                    nostrud esse pariatur dolor sit. Officia id cillum cillum <br/>
+                    voluptate minim ipsum consequat.
+                  </p>
+                </div>
 
           </Section>
 
@@ -144,10 +146,10 @@ console.log("IMGS", imgs)
           <Section title='' id='contact' img={imgs[img_idx[3]]} style={sectionStyles.contact} 
                    solid={sectionStyles.transparent} contentStyle={layoutStyles.centered}>
                 <div>
-                  <h1>Contact</h1>
-                  <h2>Wanna know me better?.</h2>
-                  <h3>Nice</h3>
-                  <p>Toss me a message at <Link to='/projects'>myemail (a) contact.com</Link></p>
+                  <h1 className={layoutStyles.fadedIn}>Contact</h1>
+                  <h2 className={layoutStyles.fadedIn}>Wanna know me better?.</h2>
+                  <h3 className={layoutStyles.fadedIn}>Nice</h3>
+                  <p className={layoutStyles.fadedIn}>Toss me a message at <Link to='/projects'>myemail (a) contact.com</Link></p>
               </div>
           </Section>
         </div>
