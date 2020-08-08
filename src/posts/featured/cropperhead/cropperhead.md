@@ -1,10 +1,11 @@
 ---
 title: "CropperHead - auto cropper AI"
 date: "1.6.2020"
-cover: ch_train.png
+cover: ch_cover.jpg
 thumbnail: cropperHead.png
 ---
 
+![A real life not copperhead](./ch_cover.jpg)  
 This'll be some nice little post about a neural network
 
 ## It can include some headers as well
