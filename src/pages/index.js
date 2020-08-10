@@ -110,7 +110,10 @@ const IndexPage = () => {
             
                 <Section title='' id='contact' img={imgs[img_idx[3]]} style={sectionStyles.contact} 
                         solid={sectionStyles.transparent} contentStyle={layoutStyles.centered}>
-                    <div>
+                    <div
+                      data-sal="slide-up"
+                      data-sal-delay="300"
+                      data-sal-easing="ease">
                         <h1 className={layoutStyles.fadedIn}>Contact</h1>
                         <h2 className={layoutStyles.fadedIn}>Wanna know me better?.</h2>
                         <h3 className={layoutStyles.fadedIn}>Nice</h3>
