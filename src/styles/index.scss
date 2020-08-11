@@ -35,7 +35,7 @@ summary {
 .app {
     display: grid;
     grid-column-gap: 0;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    // grid-template-columns: repeat(auto-fit, minmax(900px, 1fr));
 }
 
 
