@@ -1,11 +1,11 @@
 ---
 title: "TexMindMapper - visualise your thesis"
 date: "1.7.2020"
-cover: ./tmm.png
+cover: ./tmm_cover.jpeg
 thumbnail: ./tmm_logo.png
 ---
 
-![How beautiful the outside can be](./tmm.png)
+![How beautiful the outside can be](./tmm_cover.png)
 Oh boy, here we go again
 
 Some longer text right here. should use lorem ipsum or some other generator. a plugin for visual studio code prolly exists but man, it its basically the same time just to type in some bs like this to tpopoulate the file
@@ -22,8 +22,9 @@ Rather inpropable though, don't you think. More probably is the following to hap
 4. Profit
 
 ### Truth behind it
+![My thesis!](./tmm.png)
 
-THe truth being, that the reference to South Park might go unnoticed in todays peeps
+hHe truth being, that the reference to South Park might go unnoticed in todays peeps
 
 ---
 I wonder how the dividers work in the posts
