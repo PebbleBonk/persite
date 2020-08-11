@@ -7,23 +7,27 @@
     width: 100vw;;
     display: flex;
     position: sticky;
-    padding: 0 0 0.1rem;
-    background-color: rgb(47, 47, 47);
+    // background-color: rgb(47, 47, 47);
     top: 0;
     z-index: 100; /* this is optional and should be different for every project */
     
     .brand {
+        width: 100%;
+        background-color: rgb(47, 47, 47);
         display: flex;
-        justify-content: center;
-        align-items: center;
-        margin: 0;
+        visibility: hidden; 
 
-        a {
-            font-size: 2rem;
-        }
+        // justify-content: center;
+        // align-items: center;
+        // margin: 0;
+
+        // a {
+        //     font-size: 2rem;
+        // }
     }
 
     .sections {
+        background-color: rgb(47, 47, 47);
         margin-left: auto;
 
     }

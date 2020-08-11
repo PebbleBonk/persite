@@ -41,7 +41,8 @@ const ProjectsSection = (props) => {
                     const linkto = `/projects/${edge.node.fields.slug}`
                     
                     return (
-                            <Link to={linkto} className={projectsStyles.project} key={edge.node.frontmatter.title}>
+                            <Link to={linkto} className={projectsStyles.project} key={edge.node.frontmatter.title}
+                            data-sal="slide-up" data-sal-duration="500" data-sal-easing="ease">
                                 <Img fixed={edge.node.frontmatter.thumbnail.childImageSharp.fixed} alt=""/>
 
                                 <div className={projectsStyles.projectTag}>

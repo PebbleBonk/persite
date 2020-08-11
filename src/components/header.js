@@ -3,6 +3,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 // import Navbar from 'react-bootstrap/Navbar'
 // import Nav from 'react-bootstrap/Nav'
 import headerStyles from './header.module.scss'
+import sectionStyles from '../sections/sections.module.scss'
 
 // from: https://www.digitalocean.com/community/tutorials/how-to-implement-smooth-scrolling-in-react
 import { Link as ScrollLink } from "react-scroll";
@@ -35,12 +36,19 @@ const Header = (props) => {
     return (
         // Implementation without bootsrap:
         <header className={headerStyles.header}>
-            <h1 className={headerStyles.brand}>
+            {/* <h1 className={headerStyles.brand}>
                 <Link className={headerStyles.title} to='/'>
                     {data.site.siteMetadata.title}
                 </Link>
-            </h1>
+            </h1> */}
+            <div className={headerStyles.brand}>
 
+                <div className={sectionStyles.firstColumn} style={{backgroundColor: "inherit"}}></div>
+                <div className={sectionStyles.transparentColumn} style={{backgroundColor: "transparent"}}></div>
+                <div className={sectionStyles.midColumn} style={{backgroundColor: "inherit"}}></div>
+                <div className={sectionStyles.transparentColumn} style={{backgroundColor: "transparent"}}></div>
+                <div className={sectionStyles.contentColumn} style={{backgroundColor: "inherit"}}></div>
+            </div>
             <nav className={headerStyles.sections}>
                 <ul className={headerStyles.navList}>
                     {scrollLinks}
