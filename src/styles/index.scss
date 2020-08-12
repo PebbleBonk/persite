@@ -73,6 +73,7 @@ a {
     left: 48vw;
     animation: blink 5s ease-in infinite;
     animation-delay: 2s;
+    cursor: pointer;
 }
 
 @keyframes blink {
