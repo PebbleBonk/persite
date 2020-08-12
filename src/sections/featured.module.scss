@@ -25,7 +25,7 @@
 
 .featured {
     box-sizing: border-box;
-    // max-height: 320px;
+    height: 250px;
     overflow: hidden;
     background-color: #f4f4f4;
     transition: transform .2s;
@@ -55,7 +55,7 @@
 }
 
 .featured:hover .overlay {
-    opacity: 0.5;
+    opacity: 0.2;
 }
 
 

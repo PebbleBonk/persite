@@ -80,14 +80,17 @@ const IndexPage = () => {
                             qui deserunt do irure ad. Laboris ex qui labore duis Lorem tempor 
                         </p>
                         <ol>
-                            <li>Coding</li>
-                            <li>Finding</li>
-                            <li>Design</li>
+                            <li  data-sal="slide-right">Coding</li>
+                            <li  data-sal="slide-right">Finding</li>
+                            <li  data-sal="slide-right">Design</li>
                         </ol>
                     </Section>
 
                     <Section title='What can I do?' id='skills' img={imgs[img_idx[2]]} solid={false} height="half">
-                        <div className={layoutStyles.fadedIn}>
+                        <div                        
+                            data-sal="fade"
+                            data-sal-delay="300"
+                            data-sal-easing="ease">
                             <p>I like doing stuff. Different types of stuffs. </p>
                             <p>
                             Ut aliquip commodo mollit quis ad aliqua qui. 
