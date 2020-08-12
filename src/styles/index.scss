@@ -67,10 +67,10 @@ a {
     height: 100px;
     position: absolute;
     opacity: 0.0;
-    bottom: 0;
+    bottom: 3rem;
     left: 48vw;
     animation: blink 5s ease-in infinite;
-    animation-delay: 5s;
+    animation-delay: 2s;
 }
 
 @keyframes blink {

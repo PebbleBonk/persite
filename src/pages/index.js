@@ -71,7 +71,7 @@ const IndexPage = () => {
             <Section title='' id='hero' img={imgs[img_idx[0]]} solid={false} centered={true} height="no-nav">
                 <h1 className={layoutStyles.fadedIn}>Hello.</h1>
                 <h2 className={layoutStyles.fadedIn}>I am Olli</h2>
-                <ScrollLink to={'about'} spy={true} smooth={true} offset={-47} duration={500} >
+                <ScrollLink to={'about'} spy={true} smooth={true} offset={-47} duration={800} >
                     <FontAwesomeIcon icon={faChevronDown} size="2x" className="hero-scroll"/>
                 </ScrollLink>
             </Section>
