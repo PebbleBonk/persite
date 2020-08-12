@@ -2,6 +2,8 @@ import React from 'react'
 import { Parallax, Background } from 'react-parallax'
 
 import sectionStyles from '../sections/sections.module.scss'
+import layoutStyles from '../styles/layout.module.scss'
+
 // import { usePalette } from 'react-palette';
 
 
@@ -11,10 +13,24 @@ const Section = (props) => {
         // backgroundColor: data.vibrant
     }
     const muted = 'transparent' //data.darkMuted;
+    const baseStyle = (props.solid) ? (sectionStyles.solid) : (sectionStyles.transparent)
+    const isCentered = (props.centered) ? (layoutStyles.centered) : ('');
+    let heightStyle;
+
+    switch(props.height) {
+        case "full":
+            heightStyle = sectionStyles.fullHeight;
+          break;
+        case "half":
+            heightStyle = sectionStyles.halfHeight;
+          break;
+        default:
+            heightStyle = sectionStyles.fullHeight;
+      }
 
     return (
         <Parallax strength={600} className={sectionStyles.parallax}>
-        <div id={props.id} className={props.solid} style={sectionColourStyle}>
+        <div id={props.id} className={baseStyle} style={sectionColourStyle}>
 
 
                 <div className={sectionStyles.section}>
@@ -22,7 +38,7 @@ const Section = (props) => {
 
 
                     <div className={sectionStyles.sectionWrapper}>
-                        <div className={`${sectionStyles.sectionBackground} ${props.heightStyle}`}>
+                        <div className={`${sectionStyles.sectionBackground} ${heightStyle}`}>
                             <div className={sectionStyles.firstColumn}></div>
                             <div className={sectionStyles.transparentColumn}></div>
                             <div className={sectionStyles.midColumn}></div>
@@ -31,7 +47,7 @@ const Section = (props) => {
                         </div>
 
 
-                        <div className={`${sectionStyles.sectionContent} ${props.contentStyle}`}> 
+                        <div className={`${sectionStyles.sectionContent} ${isCentered}`}> 
                             <div className={sectionStyles.content} style={{ backgroundColor: muted }}>
                                 <h1>{props.title}</h1>
                                 <br/>

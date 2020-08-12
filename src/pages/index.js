@@ -65,16 +65,12 @@ const IndexPage = () => {
             <Head title='Home'/>
             <div className="app">
             
-                <Section title='' id='home' img={imgs[img_idx[0]]} style={sectionStyles.about} 
-                        solid={sectionStyles.transparent} contentStyle={layoutStyles.centered} heightStyle={sectionStyles.fullHeight}>
-                
+                <Section title='' id='home' img={imgs[img_idx[0]]} solid={false} centered={true} height="full">
                     <h1 className={layoutStyles.fadedIn}>Hello.</h1>
                     <h2 className={layoutStyles.fadedIn}>I am Olli</h2>
                 </Section>
                 
-                <Section title='About' id='about' img={imgs[img_idx[0]]} style={sectionStyles.about} 
-                        solid={sectionStyles.solid} heightStyle={sectionStyles.halfHeight}>
-                
+                <Section title='About' id='about' img={imgs[img_idx[0]]} solid={true} height="half">
                     <h1 className={layoutStyles.fadedIn}>Who am I?.</h1>
                     <h2 className={layoutStyles.fadedIn}>What do I do?</h2>
                     <p>
@@ -89,9 +85,7 @@ const IndexPage = () => {
                     </ol>
                 </Section>
 
-                <Section title='What can I do?' id='skills' img={imgs[img_idx[2]]} style={sectionStyles.about} 
-                        solid={sectionStyles.transparent} contentStyle={layoutStyles.centered} heightStyle={sectionStyles.halfHeight}>
-                
+                <Section title='What can I do?' id='skills' img={imgs[img_idx[2]]} solid={false} height="half">
                     <div className={layoutStyles.fadedIn}>
                         <p>I like doing stuff. Different types of stuffs. </p>
                         <p>
@@ -109,16 +103,9 @@ const IndexPage = () => {
                         voluptate minim ipsum consequat.
                         </p>
                     </div>
-                
                 </Section>
-
-                {/* <Section title='Featured' id='featured' img={imgs[img_idx[1]]} style={sectionStyles.featured} solid={sectionStyles.solid}>
-                <FeaturedSection>
-                <p>These are some projects I could say I am proud of.</p>
-                </FeaturedSection>
-                </Section> */}
             
-                <Section title='Projects' id='projects' img={imgs[img_idx[2]]} style={sectionStyles.projects} solid={sectionStyles.solid}>
+                <Section title='Projects' id='projects' img={imgs[img_idx[2]]} style={sectionStyles.projects} solid={true}>
                     <FeaturedSection>
                         <h2>Featured projects</h2>
                         <p>These are some projects I could say I am proud of.</p>
@@ -132,8 +119,7 @@ const IndexPage = () => {
                     </ProjectsSection>
                 </Section>
             
-                <Section title='' id='contact' img={imgs[img_idx[3]]} style={sectionStyles.contact} 
-                        solid={sectionStyles.transparent} contentStyle={layoutStyles.centered} heightStyle={sectionStyles.fullHeight}>
+                <Section title='' id='contact' img={imgs[img_idx[3]]} solid={false} centered={true} height="full">
                     <div
                       data-sal="slide-up"
                       data-sal-delay="300"
