@@ -23,7 +23,8 @@ body {
 h1 {
     // font-family: 'Trirong', serif;
     // font-family: 'Roboto', sans-serif;
-    font-size: 48px;
+    font-size: 42px;
+    margin-top: 0;
 
 }
 
@@ -59,4 +60,27 @@ summary {
 
 a {
     color: cadetblue;
+}
+
+.hero-scroll {
+    color: white;
+    height: 100px;
+    position: absolute;
+    opacity: 0.0;
+    bottom: 0;
+    left: 48vw;
+    animation: blink 5s ease-in infinite;
+    animation-delay: 5s;
+}
+
+@keyframes blink {
+	0% {
+		opacity: 0;
+	}
+	50% {
+		opacity: 0.8;
+    }
+    100% {
+		opacity: 0;
+	}
 }

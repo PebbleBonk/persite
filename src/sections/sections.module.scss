@@ -12,7 +12,7 @@ $textColor: white;
 }
 
 .halfHeight {
-    min-height: calc(#{$sectionHeight}/3 - #{$navbar-height} - 2*#{$sectionBorderHeight});
+    min-height: calc(#{$sectionHeight}/2 - #{$navbar-height}/2 - 2*#{$sectionBorderHeight});
 }
 
 .fullHeight {
@@ -50,7 +50,7 @@ $textColor: white;
     margin-left: -100%;
     color: $textColor;
     visibility: visible;
-    padding: 6rem;
+    padding: 3rem 6rem 3rem 6rem;
     box-sizing: border-box;
 
     width: 100%;

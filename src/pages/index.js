@@ -13,6 +13,10 @@ import '../styles/index.scss'
 import sectionStyles from '../sections/sections.module.scss'
 import layoutStyles from '../styles/layout.module.scss'
 
+// For hero scroll icon:
+import { Link as ScrollLink } from "react-scroll";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
 const IndexPage = () => {
     
@@ -67,7 +71,11 @@ const IndexPage = () => {
             <Section title='' id='hero' img={imgs[img_idx[0]]} solid={false} centered={true} height="no-nav">
                 <h1 className={layoutStyles.fadedIn}>Hello.</h1>
                 <h2 className={layoutStyles.fadedIn}>I am Olli</h2>
+                <ScrollLink to={'about'} spy={true} smooth={true} offset={-47} duration={500} >
+                    <FontAwesomeIcon icon={faChevronDown} size="2x" className="hero-scroll"/>
+                </ScrollLink>
             </Section>
+
             <Layout scrollRefs={sections}> 
                 <Head title='Home'/>
                 <div className="sectionsGrid">
