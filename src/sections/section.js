@@ -32,7 +32,7 @@ const Section = (props) => {
       }
 
     return (
-        <Parallax strength={600} className={sectionStyles.parallax}>
+        <Parallax strength={300} className={sectionStyles.parallax}>
         <div id={props.id} className={baseStyle} style={sectionColourStyle}>
 
 
@@ -67,10 +67,13 @@ const Section = (props) => {
 
 
         </div>
-        <Background style={{width: '100%', height: '100%'}}>
-            <div className={sectionStyles.blendImgWrapper}>
-                <img src={props.img} alt=""/>
+        <Background >
+            <div className={sectionStyles.blendImgWrapper} style={{width: '100vw', height: '200vh'}}>
+                {props.img}
             </div>
+            {/* <div className={sectionStyles.blendImgWrapper}>
+                <img src={props.img} alt=""/>
+            </div> */}
         </Background>
      </Parallax>
     )

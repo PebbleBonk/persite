@@ -1,6 +1,6 @@
 import React from 'react'
 import { Link, useStaticQuery, graphql } from 'gatsby'
-// import Img from "gatsby-image"
+import Img from "gatsby-image"
 
 import Layout from '../components/layout'
 import Head from '../components/head'
@@ -29,7 +29,7 @@ const IndexPage = () => {
                         base
                         publicURL
                         childImageSharp {
-                            fluid {
+                            fluid (maxWidth: 1500 , maxHeight: 1500 ) {
                                 ...GatsbyImageSharpFluid
                             }
                         }
@@ -41,11 +41,13 @@ const IndexPage = () => {
         `)
         
     const imgs = imD.allFile.edges.map(image => {
-        return image.node.publicURL
-        //  <Img
-        //           fluid={image.node.childImageSharp.fluid}
-        //           alt={image.node.base.split(".")[0]} // only use section of the file extension with the filename
-        //         />
+        // return image.node.publicURL
+         return <Img
+                  fluid={image.node.childImageSharp.fluid}
+                //   imgStyle={{ objectFit: 'contain' }}
+                  style={{minHeight: '150vh'}}
+                  alt={image.node.base.split(".")[0]} // only use section of the file extension with the filename
+                />
     })
     
     
