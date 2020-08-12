@@ -44,9 +44,9 @@ const Header = (props) => {
             <div className={headerStyles.brand}>
 
                 <div className={sectionStyles.firstColumn} style={{backgroundColor: "inherit"}}></div>
-                <div className={sectionStyles.transparentColumn} style={{backgroundColor: "transparent"}}></div>
+                <div className={sectionStyles.transparentColumn} style={{backgroundColor: "rgba(255,255,255,0.2)"}}></div>
                 <div className={sectionStyles.midColumn} style={{backgroundColor: "inherit"}}></div>
-                <div className={sectionStyles.transparentColumn} style={{backgroundColor: "transparent"}}></div>
+                <div className={sectionStyles.transparentColumn} style={{backgroundColor: "rgba(255,255,255,0.2)"}}></div>
                 <div className={sectionStyles.contentColumn} style={{backgroundColor: "inherit"}}></div>
             </div>
             <nav className={headerStyles.sections}>
