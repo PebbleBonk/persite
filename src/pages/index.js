@@ -61,77 +61,72 @@ const IndexPage = () => {
     ]
 
     return (
-        <Layout scrollRefs={sections}> 
-            <Head title='Home'/>
-            <div className="app">
-            
-                <Section title='' id='home' img={imgs[img_idx[0]]} solid={false} centered={true} height="full">
-                    <h1 className={layoutStyles.fadedIn}>Hello.</h1>
-                    <h2 className={layoutStyles.fadedIn}>I am Olli</h2>
-                </Section>
-                
-                <Section title='About' id='about' img={imgs[img_idx[0]]} solid={true} height="half">
-                    <h1 className={layoutStyles.fadedIn}>Who am I?.</h1>
-                    <h2 className={layoutStyles.fadedIn}>What do I do?</h2>
-                    <p>
-                        Lorem dolore mollit dolor aliqua eu nostrud quis laborum aliquip.<br/>
-                        Incididunt officia fugiat cillum ullamco ad adipisicing cupidatat <br/>
-                        qui deserunt do irure ad. Laboris ex qui labore duis Lorem tempor 
-                    </p>
-                    <ol>
-                        <li>Coding</li>
-                        <li>Finding</li>
-                        <li>Design</li>
-                    </ol>
-                </Section>
+        <div className="app">
+            <Layout scrollRefs={sections}> 
+                <Head title='Home'/>
+                <div className="sectionsGrid">
 
-                <Section title='What can I do?' id='skills' img={imgs[img_idx[2]]} solid={false} height="half">
-                    <div className={layoutStyles.fadedIn}>
-                        <p>I like doing stuff. Different types of stuffs. </p>
+                    <Section title='' id='home' img={imgs[img_idx[0]]} solid={false} centered={true} height="full">
+                        <h1 className={layoutStyles.fadedIn}>Hello.</h1>
+                        <h2 className={layoutStyles.fadedIn}>I am Olli</h2>
+                    </Section>
+                    
+                    <Section title='About' id='about' img={imgs[img_idx[0]]} solid={true} height="half">
+                        <h2 className={layoutStyles.fadedIn}>What do I do?</h2>
                         <p>
-                        Ut aliquip commodo mollit quis ad aliqua qui. 
+                            Lorem dolore mollit dolor aliqua eu nostrud quis laborum aliquip.<br/>
+                            Incididunt officia fugiat cillum ullamco ad adipisicing cupidatat <br/>
+                            qui deserunt do irure ad. Laboris ex qui labore duis Lorem tempor 
                         </p>
-                        <p>
-                        Lorem dolore mollit dolor aliqua eu nostrud quis laborum aliquip.<br/>
-                        Incididunt officia fugiat cillum ullamco ad adipisicing cupidatat <br/>
-                        qui deserunt do irure ad. Laboris ex qui labore duis Lorem tempor 
-                        </p>
-                        <p>  
-                        quis ex sit consectetur in nostrud est ex. Ut enim elit incididunt<br/>
-                        dolore deserunt exercitation. Ex adipisicing officia sint irure <br/>
-                        nostrud esse pariatur dolor sit. Officia id cillum cillum <br/>
-                        voluptate minim ipsum consequat.
-                        </p>
-                    </div>
-                </Section>
-            
-                <Section title='Projects' id='projects' img={imgs[img_idx[2]]} style={sectionStyles.projects} solid={true}>
-                    <FeaturedSection>
-                        <h2>Featured projects</h2>
-                        <p>These are some projects I could say I am proud of.</p>
-                    </FeaturedSection>
-                    <ProjectsSection>
-                        <h2>Misc. projects</h2>
-                        <p>
-                        These are some other projects I've worked on, which might not be so polished, 
-                        but still worth checking out
-                        </p>
-                    </ProjectsSection>
-                </Section>
-            
-                <Section title='' id='contact' img={imgs[img_idx[3]]} solid={false} centered={true} height="full">
-                    <div
-                      data-sal="slide-up"
-                      data-sal-delay="300"
-                      data-sal-easing="ease">
-                        <h1 className={layoutStyles.fadedIn}>Contact</h1>
-                        <h2 className={layoutStyles.fadedIn}>Wanna know me better?</h2>
-                        <p className={layoutStyles.fadedIn}>Nice.</p>
-                        <p className={layoutStyles.fadedIn}>Toss me a message at <Link to='/projects'>myemail (a) contact.com</Link></p>
-                    </div>
-                </Section>
-            </div>
-        </Layout>
+                        <ol>
+                            <li>Coding</li>
+                            <li>Finding</li>
+                            <li>Design</li>
+                        </ol>
+                    </Section>
+
+                    <Section title='What can I do?' id='skills' img={imgs[img_idx[2]]} solid={false} height="half">
+                        <div className={layoutStyles.fadedIn}>
+                            <p>I like doing stuff. Different types of stuffs. </p>
+                            <p>
+                            Ut aliquip commodo mollit quis ad aliqua qui. 
+                            </p>
+                            <p>
+                            Lorem dolore mollit dolor aliqua eu nostrud quis laborum aliquip.<br/>
+                            Incididunt officia fugiat cillum ullamco ad adipisicing cupidatat <br/>
+                            qui deserunt do irure ad. Laboris ex qui labore duis Lorem tempor 
+                            </p>
+                        </div>
+                    </Section>
+                
+                    <Section title='Projects' id='projects' img={imgs[img_idx[2]]} style={sectionStyles.projects} solid={true}>
+                        <FeaturedSection>
+                            <h2>Featured projects</h2>
+                            <p>These are some projects I could say I am proud of.</p>
+                        </FeaturedSection>
+                        <ProjectsSection>
+                            <h2>Misc. projects</h2>
+                            <p>
+                            These are some other projects I've worked on, which might not be so polished, 
+                            but still worth checking out
+                            </p>
+                        </ProjectsSection>
+                    </Section>
+                
+                    <Section title='' id='contact' img={imgs[img_idx[3]]} solid={false} centered={true} height="full">
+                        <div
+                        data-sal="slide-up"
+                        data-sal-delay="300"
+                        data-sal-easing="ease">
+                            <h1 className={layoutStyles.fadedIn}>Contact</h1>
+                            <h2 className={layoutStyles.fadedIn}>Wanna know me better?</h2>
+                            <p className={layoutStyles.fadedIn}>Nice.</p>
+                            <p className={layoutStyles.fadedIn}>Toss me a message at <Link to='/projects'>myemail (a) contact.com</Link></p>
+                        </div>
+                    </Section>
+                </div>
+            </Layout>
+        </div>
     )
 }
     
