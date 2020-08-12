@@ -3,11 +3,16 @@ $navbar-height: 60px;
 $sectionBorderHeight: 50px; 
 $sectionWidth: 100vw;
 $backgroundColor: #004879;
-$sectionColor: #3a3939; //
+$sectionColor: rgb(47, 47, 47); //#3a3939; //
 $textColor: white;
 
+
+.noNavBar {
+    min-height: calc(#{$sectionHeight} - 2*#{$sectionBorderHeight});
+}
+
 .halfHeight {
-    min-height: calc(#{$sectionHeight}/2 - #{$navbar-height} - 2*#{$sectionBorderHeight});
+    min-height: calc(#{$sectionHeight}/3 - #{$navbar-height} - 2*#{$sectionBorderHeight});
 }
 
 .fullHeight {

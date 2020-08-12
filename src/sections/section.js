@@ -18,6 +18,9 @@ const Section = (props) => {
     let heightStyle;
 
     switch(props.height) {
+        case "no-nav":
+            heightStyle = sectionStyles.noNavBar;
+          break;
         case "full":
             heightStyle = sectionStyles.fullHeight;
           break;

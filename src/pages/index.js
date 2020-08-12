@@ -62,14 +62,15 @@ const IndexPage = () => {
 
     return (
         <div className="app">
+            <Section title='' id='hero' img={imgs[img_idx[0]]} solid={false} centered={true} height="no-nav">
+                <h1 className={layoutStyles.fadedIn}>Hello.</h1>
+                <h2 className={layoutStyles.fadedIn}>I am Olli</h2>
+            </Section>
             <Layout scrollRefs={sections}> 
                 <Head title='Home'/>
                 <div className="sectionsGrid">
 
-                    <Section title='' id='home' img={imgs[img_idx[0]]} solid={false} centered={true} height="full">
-                        <h1 className={layoutStyles.fadedIn}>Hello.</h1>
-                        <h2 className={layoutStyles.fadedIn}>I am Olli</h2>
-                    </Section>
+
                     
                     <Section title='About' id='about' img={imgs[img_idx[0]]} solid={true} height="half">
                         <h2 className={layoutStyles.fadedIn}>What do I do?</h2>
