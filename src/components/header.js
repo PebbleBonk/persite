@@ -1,5 +1,5 @@
 import React from 'react'
-// import { Link, graphql, useStaticQuery } from 'gatsby'
+import { Link, graphql, useStaticQuery } from 'gatsby'
 // import Navbar from 'react-bootstrap/Navbar'
 // import Nav from 'react-bootstrap/Nav'
 import headerStyles from './header.module.scss'
@@ -43,10 +43,13 @@ const Header = (props) => {
             </h1> */}
             <div className={headerStyles.brand}>
 
+            <Link to="/" >
                 <div className={sectionStyles.firstColumn} style={{backgroundColor: "inherit"}}></div>
                 <div className={sectionStyles.transparentColumn} style={{backgroundColor: "rgba(255,255,255,0.2)"}}></div>
                 <div className={sectionStyles.midColumn} style={{backgroundColor: "inherit"}}></div>
                 <div className={sectionStyles.transparentColumn} style={{backgroundColor: "rgba(255,255,255,0.2)"}}></div>
+                <div className={sectionStyles.firstColumn} style={{backgroundColor: "inherit"}}></div>
+            </Link>
                 <div className={sectionStyles.contentColumn} style={{backgroundColor: "inherit"}}></div>
             </div>
             <nav className={headerStyles.sections}>
