@@ -18,6 +18,7 @@ import { Link as ScrollLink } from "react-scroll";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 
+import Div100vh from 'react-div-100vh'
 const IndexPage = () => {
     
     const imD = useStaticQuery(graphql`
@@ -68,12 +69,17 @@ const IndexPage = () => {
 
     return (
         <div className="app">
-            <Section title='' id='hero' img={imgs[img_idx[0]]} solid={false} centered={true} height="no-nav">
-                <h1 className={layoutStyles.fadedIn}>Hello.</h1>
-                <h2 className={layoutStyles.fadedIn}>I am Olli</h2>
-                <ScrollLink to={'about'} spy={true} smooth={true} offset={-47} duration={800} >
-                    <FontAwesomeIcon icon={faChevronDown} size="2x" className="hero-scroll"/>
-                </ScrollLink>
+            <Section title='' id='hero' img={imgs[img_idx[0]]} solid={false} centered={true} height="" noTitle={true} noPadding={true}>
+                <Div100vh>
+                    <div className="hero">
+                        <h1 className={layoutStyles.fadedIn}>Hello.</h1>
+                        <h2 className={layoutStyles.fadedIn}>I am Olli</h2>
+                    </div>
+
+                    <ScrollLink to={'about'} spy={true} smooth={true} offset={-47} duration={800} >
+                        <FontAwesomeIcon icon={faChevronDown} size="2x" className="hero-scroll"/>
+                    </ScrollLink>
+                </Div100vh>
             </Section>
 
             <Layout scrollRefs={sections}> 
@@ -127,7 +133,7 @@ const IndexPage = () => {
                         </ProjectsSection>
                     </Section>
                 
-                    <Section title='' id='contact' img={imgs[img_idx[3]]} solid={false} centered={true} height="full">
+                    <Section title='' id='contact' img={imgs[img_idx[3]]} solid={false} centered={true} height="nav-and-footer">
                         <div
                         data-sal="slide-up"
                         data-sal-delay="300"

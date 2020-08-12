@@ -3,7 +3,7 @@ import { Parallax, Background } from 'react-parallax'
 
 import sectionStyles from '../sections/sections.module.scss'
 import layoutStyles from '../styles/layout.module.scss'
-
+// import Div100vh from 'react-div-100vh'
 // import { usePalette } from 'react-palette';
 
 
@@ -15,33 +15,46 @@ const Section = (props) => {
     const muted = 'transparent' //data.darkMuted;
     const baseStyle = (props.solid) ? (sectionStyles.solid) : (sectionStyles.transparent)
     const isCentered = (props.centered) ? (layoutStyles.centered) : ('');
+    const noPadding = (props.noPadding) ? (sectionStyles.noPadSection) : (sectionStyles.paddedSection);
     let heightStyle;
 
     switch(props.height) {
         case "no-nav":
             heightStyle = sectionStyles.noNavBar;
-          break;
+            break;
         case "full":
             heightStyle = sectionStyles.fullHeight;
-          break;
+            break;
         case "half":
             heightStyle = sectionStyles.halfHeight;
-          break;
+            break;
+        case "nav-and-footer":	
+            heightStyle = sectionStyles.fullNavAndFooter;
+            break;
         default:
-            heightStyle = sectionStyles.fullHeight;
-      }
+            heightStyle = '';
+    }
 
+    let title;
+    if (props.noTitle) {
+        title = ''
+    } else {
+        title = <React.Fragment>
+            <h1>{props.title}</h1>
+            <br/>
+        </React.Fragment>
+    }
     return (
         <Parallax strength={300} className={sectionStyles.parallax}>
         <div id={props.id} className={baseStyle} style={sectionColourStyle}>
 
 
-                <div className={sectionStyles.section}>
-                    <div className={sectionStyles.sectionBorder}></div>
+                <div className={`${sectionStyles.section}`}>
+                    {/* <div className={sectionStyles.sectionBorder}></div> */}
 
 
-                    <div className={sectionStyles.sectionWrapper}>
-                        <div className={`${sectionStyles.sectionBackground} ${heightStyle}`}>
+                    <div className={`${sectionStyles.sectionWrapper} ${heightStyle}`}>
+                        <div className={`${sectionStyles.sectionBackground}`}>
                             <div className={sectionStyles.firstColumn}></div>
                             <div className={sectionStyles.transparentColumn}></div>
                             <div className={sectionStyles.midColumn}></div>
@@ -50,10 +63,9 @@ const Section = (props) => {
                         </div>
 
 
-                        <div className={`${sectionStyles.sectionContent} ${isCentered}`}> 
+                        <div className={`${sectionStyles.sectionContent} ${isCentered} ${noPadding}`}> 
                             <div className={sectionStyles.content} style={{ backgroundColor: muted }}>
-                                <h1>{props.title}</h1>
-                                <br/>
+                                {title}
                                 <div>
                                     {props.children}
                                 </div>
@@ -62,7 +74,7 @@ const Section = (props) => {
 
                     </div>
 
-                    <div className={sectionStyles.sectionBorder}></div>
+                    {/* <div className={sectionStyles.sectionBorder}></div> */}
                 </div>
 
 

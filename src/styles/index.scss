@@ -59,7 +59,7 @@ summary {
 
 
 a {
-    color: cadetblue;
+    color: rgb(214, 221, 221);
 }
 
 .hero-scroll {
@@ -83,4 +83,8 @@ a {
     100% {
 		opacity: 0;
 	}
+}
+
+.hero {
+    padding-top: 25vh;
 }
