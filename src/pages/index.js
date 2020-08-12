@@ -66,8 +66,8 @@ const IndexPage = () => {
                 <Section title='' id='about' img={imgs[img_idx[0]]} style={sectionStyles.about} 
                         solid={sectionStyles.transparent} contentStyle={layoutStyles.centered}>
                 
-                    <h2 className={layoutStyles.fadedIn}>Hello.</h2>
-                    <h3 className={layoutStyles.fadedIn}>I am Olli</h3>
+                    <h1 className={layoutStyles.fadedIn}>Hello.</h1>
+                    <h2 className={layoutStyles.fadedIn}>I am Olli</h2>
                     <div className={layoutStyles.fadedIn}>
                         <p>I like doing stuff. Different types of stuffs. </p>
                         <p>
@@ -115,8 +115,8 @@ const IndexPage = () => {
                       data-sal-delay="300"
                       data-sal-easing="ease">
                         <h1 className={layoutStyles.fadedIn}>Contact</h1>
-                        <h2 className={layoutStyles.fadedIn}>Wanna know me better?.</h2>
-                        <h3 className={layoutStyles.fadedIn}>Nice</h3>
+                        <h2 className={layoutStyles.fadedIn}>Wanna know me better?</h2>
+                        <p className={layoutStyles.fadedIn}>Nice.</p>
                         <p className={layoutStyles.fadedIn}>Toss me a message at <Link to='/projects'>myemail (a) contact.com</Link></p>
                     </div>
                 </Section>
