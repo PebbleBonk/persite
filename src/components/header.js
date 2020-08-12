@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql, useStaticQuery } from 'gatsby'
+// import { Link, graphql, useStaticQuery } from 'gatsby'
 // import Navbar from 'react-bootstrap/Navbar'
 // import Nav from 'react-bootstrap/Nav'
 import headerStyles from './header.module.scss'
@@ -10,12 +10,12 @@ import { Link as ScrollLink } from "react-scroll";
 
 
 const Header = (props) => {
-    const data = useStaticQuery(graphql`
-        query { site { siteMetadata {
-            title
-            }
-        }}
-    `)
+    // const data = useStaticQuery(graphql`
+    //     query { site { siteMetadata {
+    //         title
+    //         }
+    //     }}
+    // `)
 
     let scrollLinks;
     if (typeof props.scrollRefs !== 'undefined' ) {
