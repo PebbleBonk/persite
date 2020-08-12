@@ -8,6 +8,9 @@ html {
 }
 body {
     margin: 0;
+    min-width: 320px;
+    width: 320px;
+    width: auto !important;
     font-family: 'Raleway', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -32,7 +35,7 @@ summary {
 .app {
     display: grid;
     grid-column-gap: 0;
-    grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
+    // grid-template-columns: repeat(auto-fit, minmax(900px, 1fr));
 }
 
 
