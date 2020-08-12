@@ -22,7 +22,7 @@ const Section = (props) => {
 
 
                     <div className={sectionStyles.sectionWrapper}>
-                        <div className={sectionStyles.sectionBackground}>
+                        <div className={`${sectionStyles.sectionBackground} ${props.heightStyle}`}>
                             <div className={sectionStyles.firstColumn}></div>
                             <div className={sectionStyles.transparentColumn}></div>
                             <div className={sectionStyles.midColumn}></div>

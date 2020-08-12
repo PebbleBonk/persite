@@ -53,7 +53,9 @@ const IndexPage = () => {
     const img_idx = RandSet(0, imgs.length-1, 4)
     
     const sections = [
+        {id: '', slug: 'home'},
         {id: 'About', slug: 'about'},
+        {id: 'Skills', slug: 'skills'},
         {id: 'Projects', slug: 'projects'},
         {id: 'Contact', slug: 'contact'}
     ]
@@ -63,11 +65,33 @@ const IndexPage = () => {
             <Head title='Home'/>
             <div className="app">
             
-                <Section title='' id='about' img={imgs[img_idx[0]]} style={sectionStyles.about} 
-                        solid={sectionStyles.transparent} contentStyle={layoutStyles.centered}>
+                <Section title='' id='home' img={imgs[img_idx[0]]} style={sectionStyles.about} 
+                        solid={sectionStyles.transparent} contentStyle={layoutStyles.centered} heightStyle={sectionStyles.fullHeight}>
                 
                     <h1 className={layoutStyles.fadedIn}>Hello.</h1>
                     <h2 className={layoutStyles.fadedIn}>I am Olli</h2>
+                </Section>
+                
+                <Section title='About' id='about' img={imgs[img_idx[0]]} style={sectionStyles.about} 
+                        solid={sectionStyles.solid} heightStyle={sectionStyles.halfHeight}>
+                
+                    <h1 className={layoutStyles.fadedIn}>Who am I?.</h1>
+                    <h2 className={layoutStyles.fadedIn}>What do I do?</h2>
+                    <p>
+                        Lorem dolore mollit dolor aliqua eu nostrud quis laborum aliquip.<br/>
+                        Incididunt officia fugiat cillum ullamco ad adipisicing cupidatat <br/>
+                        qui deserunt do irure ad. Laboris ex qui labore duis Lorem tempor 
+                    </p>
+                    <ol>
+                        <li>Coding</li>
+                        <li>Finding</li>
+                        <li>Design</li>
+                    </ol>
+                </Section>
+
+                <Section title='What can I do?' id='skills' img={imgs[img_idx[2]]} style={sectionStyles.about} 
+                        solid={sectionStyles.transparent} contentStyle={layoutStyles.centered} heightStyle={sectionStyles.halfHeight}>
+                
                     <div className={layoutStyles.fadedIn}>
                         <p>I like doing stuff. Different types of stuffs. </p>
                         <p>
@@ -87,7 +111,7 @@ const IndexPage = () => {
                     </div>
                 
                 </Section>
-                
+
                 {/* <Section title='Featured' id='featured' img={imgs[img_idx[1]]} style={sectionStyles.featured} solid={sectionStyles.solid}>
                 <FeaturedSection>
                 <p>These are some projects I could say I am proud of.</p>
@@ -109,7 +133,7 @@ const IndexPage = () => {
                 </Section>
             
                 <Section title='' id='contact' img={imgs[img_idx[3]]} style={sectionStyles.contact} 
-                        solid={sectionStyles.transparent} contentStyle={layoutStyles.centered}>
+                        solid={sectionStyles.transparent} contentStyle={layoutStyles.centered} heightStyle={sectionStyles.fullHeight}>
                     <div
                       data-sal="slide-up"
                       data-sal-delay="300"

@@ -6,6 +6,13 @@ $backgroundColor: #004879;
 $sectionColor: #3a3939; //
 $textColor: white;
 
+.halfHeight {
+    min-height: calc(#{$sectionHeight}/2 - #{$navbar-height} - 2*#{$sectionBorderHeight});
+}
+
+.fullHeight {
+    min-height: calc(#{$sectionHeight} - #{$navbar-height} - 2*#{$sectionBorderHeight});
+}
 
 // Basic styles for the section:
 .parallax {
@@ -15,7 +22,7 @@ $textColor: white;
 }
 
 .section {
-    min-height: calc(#{$sectionHeight} - #{$navbar-height} - 2*#{$sectionBorderHeight});
+    // min-height: calc(#{$sectionHeight} - #{$navbar-height} - 2*#{$sectionBorderHeight});
     height: 100%;
 }
 
@@ -24,7 +31,7 @@ $textColor: white;
 }
 
 .sectionBackground {
-    min-height: calc(#{$sectionHeight} - #{$navbar-height} - 2*#{$sectionBorderHeight});
+    // min-height: calc(#{$sectionHeight} - #{$navbar-height} - 2*#{$sectionBorderHeight});
 
     background-color: inherit;
     width: $sectionWidth;
