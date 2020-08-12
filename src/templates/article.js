@@ -3,7 +3,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import { graphql } from 'gatsby'
 
-import projectStyles from './project.module.scss'
+import articleStyles from './article.module.scss'
 
 
 export const query = graphql`
@@ -24,10 +24,10 @@ export const query = graphql`
     }
 `
     
-const Project = (props) => {
+const Article = (props) => {
     return (
         <Layout>
-            <div className={projectStyles.article}>
+            <div className={articleStyles.article}>
                 <h1>{props.data.markdownRemark.frontmatter.title}</h1>
                 <p>{props.data.markdownRemark.frontmatter.date}</p>
                 <div dangerouslySetInnerHTML={{__html: props.data.markdownRemark.html}}></div>
@@ -36,4 +36,4 @@ const Project = (props) => {
         )
     }
     
-export default Project
+export default Article
