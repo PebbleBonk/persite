@@ -25,8 +25,8 @@ export const query = graphql`
 `
     
 const Article = ({ data, pageContext }) => {
-    console.log("MAMERU,", pageContext)
     const { next, prev } = pageContext.navContext
+
     return (
         <Layout>
             <div className={articleStyles.navWrapper}>
@@ -36,6 +36,9 @@ const Article = ({ data, pageContext }) => {
                     Previous: {prev.title}
                     </Link>
                 )}
+                </div>
+                <div className={articleStyles.navBack}>
+                    <Link to="/">Home</Link>
                 </div>
                 <div className={articleStyles.navNext}>
                 {next && (
