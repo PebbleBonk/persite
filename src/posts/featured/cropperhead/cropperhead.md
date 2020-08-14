@@ -5,7 +5,6 @@ cover: ch_cover.jpg
 thumbnail: cropperHead.png
 ---
 
-![A real life not copperhead](./ch_cover.jpg)  
 This'll be some nice little post about a neural network
 
 ## It can include some headers as well
