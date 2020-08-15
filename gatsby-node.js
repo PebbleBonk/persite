@@ -25,28 +25,51 @@ exports.createPages = async ({ graphql, actions }) => {
 
     const res = await graphql(`
     query {
-        allMarkdownRemark {
+        allMarkdownRemark (
+            sort: { order: DESC, fields: [frontmatter___date] }
+        ){
             edges {
                 node {
+                    frontmatter {title}
                     fields {
                         slug
                     }
                 }
             }
         }
-    }`)
-    res.data.allMarkdownRemark.edges.forEach((edge) => {
+    }
+    `)
+    let prev, curr, next;
+    const l = res.data.allMarkdownRemark.edges.length;
+    // res.data.allMarkdownRemark.edges.forEach((edge) => {
+    for(i = 0; i < l; i++) {
+        curr = (next == null) ? getNavContext(res.data.allMarkdownRemark.edges[i]) : next;
+        next = (i+1<l) ? getNavContext(res.data.allMarkdownRemark.edges[i+1]) : null;
+
         createPage({
             component: articleTemplate,
-            path: `/projects/${edge.node.fields.slug}`,
+            path: curr.path,
             context: {
-                slug: edge.node.fields.slug
+                slug: curr.slug,
+                navContext: {next: next, prev: prev}
             }
         }
         )
-    });
+
+        prev = curr;
+    };
 }
 
+const getNavContext = (edge) => {
+    if (edge == null) {
+        return null;
+    }
+    return {
+        path: `/projects/${edge.node.fields.slug}`,
+        title: edge.node.frontmatter.title,
+        slug: edge.node.fields.slug
+    }
+}
 
 // Fixes the constant react-dom error message on console.
 // Solution found in: https://stackoverflow.com/questions/56093598

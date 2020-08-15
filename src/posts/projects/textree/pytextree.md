@@ -5,8 +5,6 @@ cover: ./tree.jpg
 thumbnail: ./logo.png
 ---
 
-![How beautiful the outside can be](./tree.jpg)
-# PyTexTree
 Create a tree object from a LaTeX project. v0.1.1.
 
 
