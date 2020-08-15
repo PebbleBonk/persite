@@ -56,6 +56,8 @@ const PasswordProtect = () => {
   };
 
   return (
+    <div>
+
     <div style={styles.wrapper}>
       <h1 style={{ color: '#fff' }}>Welcome</h1>
       <p style={{ color: '#fff' }}>This site is still under development</p>
@@ -68,7 +70,7 @@ const PasswordProtect = () => {
           value={password}
           onChange={event => setPassword(event.target.value)}
           style={styles.input}
-        />
+          />
 
         <button
           type="submit"
@@ -78,10 +80,11 @@ const PasswordProtect = () => {
           }}
           onMouseEnter={() => buttonHover(true)}
           onMouseLeave={() => buttonHover(false)}
-        >
+          >
           Enter
         </button>
       </form>
+    </div>
     </div>
   );
 };
