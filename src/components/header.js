@@ -23,7 +23,7 @@ const Header = (props) => {
             return (
                 <li key={id}>
                     <ScrollLink className={headerStyles.navItem} activeClass={headerStyles.activeNavItem}
-                                to={slug} spy={true} smooth={true} offset={-47} duration={500} >{id}
+                                to={slug} spy={true} smooth={true} offset={-40} duration={500} >{id}
                     </ScrollLink>
                 </li>
             )
