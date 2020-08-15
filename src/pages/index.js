@@ -76,7 +76,7 @@ const IndexPage = () => {
                         <h2 className={layoutStyles.fadedIn}>I am Olli</h2>
                     </div>
 
-                    <ScrollLink to={'about'} spy={true} smooth={true} offset={-47} duration={800} >
+                    <ScrollLink to={'about'} spy={true} smooth={true} offset={-40} duration={800} >
                         <FontAwesomeIcon icon={faChevronDown} size="2x" className="hero-scroll"/>
                     </ScrollLink>
                 </Div100vh>
