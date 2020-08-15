@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "persite",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "A simple personal portfolio site",
   "version": "0.1.0",
-  "license": "0BSD",
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop-server": "env-cmd -f .env.development gatsby develop -H 192.168.1.146 -p 8000",
