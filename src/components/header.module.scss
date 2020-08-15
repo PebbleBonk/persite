@@ -66,13 +66,14 @@ $navbar-height: 50px;
 }
 
 .nav-item > .active {
-    border-bottom: 1px solid rgb(255, 45, 45);
+    border-bottom: 5px solid #FCB686;;
 }
 
 .nav-item:hover {
-    color: #666666;
+    color: #FCB686;
 }
 
 .active-nav-item {
     color: #FCB686; //#ffd255;
+    border-bottom: 3px solid #FCB686;
 }
