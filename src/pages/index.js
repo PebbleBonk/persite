@@ -89,22 +89,27 @@ const IndexPage = () => {
 
                     
                     <Section title='About' id='about' img={imgs[img_idx[0]]} solid={true} height="half">
-                        <h2 className={layoutStyles.fadedIn}>What do I do?</h2>
-                        <p>
-                            Lorem dolore mollit dolor aliqua eu nostrud quis laborum aliquip.<br/>
-                            Incididunt officia fugiat cillum ullamco ad adipisicing cupidatat <br/>
-                            qui deserunt do irure ad. Laboris ex qui labore duis Lorem tempor 
-                        </p>
-                        <ol>
-                            <li  data-sal="slide-right">Coding</li>
-                            <li  data-sal="slide-right">Finding</li>
-                            <li  data-sal="slide-right">Design</li>
-                        </ol>
+                        <div                        
+                            data-sal="slide-up"
+                            data-sal-delay="300"
+                            data-sal-easing="ease">
+                            <h2 className={layoutStyles.fadedIn}>What do I do?</h2>
+                            <p>
+                                Lorem dolore mollit dolor aliqua eu nostrud quis laborum aliquip.<br/>
+                                Incididunt officia fugiat cillum ullamco ad adipisicing cupidatat <br/>
+                                qui deserunt do irure ad. Laboris ex qui labore duis Lorem tempor 
+                            </p>
+                            <ol>
+                                <li  data-sal="slide-right">Coding</li>
+                                <li  data-sal="slide-right">Finding</li>
+                                <li  data-sal="slide-right">Design</li>
+                            </ol>
+                        </div>
                     </Section>
 
                     <Section title='What can I do?' id='skills' img={imgs[img_idx[2]]} solid={false} height="half">
                         <div                        
-                            data-sal="fade"
+                            data-sal="slide-up"
                             data-sal-delay="300"
                             data-sal-easing="ease">
                             <p>I like doing stuff. Different types of stuffs. </p>
@@ -121,15 +126,25 @@ const IndexPage = () => {
                 
                     <Section title='Projects' id='projects' img={imgs[img_idx[2]]} style={sectionStyles.projects} solid={true}>
                         <FeaturedSection>
-                            <h2>Featured projects</h2>
-                            <p>These are some projects I could say I am proud of.</p>
+                            <div                        
+                                data-sal="slide-up"
+                                data-sal-delay="300"
+                                data-sal-easing="ease">
+                                <h2>Featured projects</h2>
+                                <p>These are some projects I could say I am proud of.</p>
+                            </div>
                         </FeaturedSection>
                         <ProjectsSection>
-                            <h2>Misc. projects</h2>
-                            <p>
-                            These are some other projects I've worked on, which might not be so polished, 
-                            but still worth checking out
-                            </p>
+                            <div                        
+                                data-sal="slide-up"
+                                data-sal-delay="300"
+                                data-sal-easing="ease">
+                                <h2>Misc. projects</h2>
+                                <p>
+                                These are some other projects I've worked on, which might not be so polished, 
+                                but still worth checking out
+                                </p>
+                            </div>
                         </ProjectsSection>
                     </Section>
                 
