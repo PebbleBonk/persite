@@ -90,3 +90,7 @@ a {
 .hero {
     padding-top: 25vh;
 }
+
+#gatsby-focus-wrapper > div {
+    display: block !important;
+}
