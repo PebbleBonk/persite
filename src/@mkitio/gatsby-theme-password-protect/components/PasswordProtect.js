@@ -3,7 +3,7 @@
  */
 import React, { useState } from 'react';
 import { setSessionPassword } from '../utils/utils';
-import { faAutoprefixer } from '@fortawesome/free-brands-svg-icons';
+// import { faAutoprefixer } from '@fortawesome/free-brands-svg-icons';
 
 const styles = {
   // wrapper: {
