@@ -1,42 +1,47 @@
-$navbar-height: 50px;
+$navbar-height: 40px;
 
 .link {
     color: #999999;
 }
 
+
 .header {
     height: $navbar-height;
     box-shadow: 1rem 1rem 2rem rgba(0,0,0,0.2);
-    width: 100vw;;
-    display: flex;
+    width: 100vw;
+    // display: flex;
     position: sticky;
     // background-color: rgb(47, 47, 47);
     top: 0;
     z-index: 100; /* this is optional and should be different for every project */
-    
-    .brand {
-        width: 100%;
-        background-color: rgb(47, 47, 47);
+
+    .headerWrap {
         display: flex;
-        visibility: hidden; 
 
-        // justify-content: center;
-        // align-items: center;
-        // margin: 0;
-
-        a {
+        .brand {
+            width: 100%;
             background-color: rgb(47, 47, 47);
             display: flex;
-            font-size: 2rem;
+            visibility: hidden; 
+
+            // justify-content: center;
+            // align-items: center;
+            // margin: 0;
+
+            a {
+                background-color: rgb(47, 47, 47);
+                display: flex;
+                font-size: 2rem;
+            }
         }
-    }
 
-    .sections {
-        background-color: rgb(47, 47, 47);
-        margin-left: auto;
+        .sections {
+            background-color: rgb(47, 47, 47);
+            margin-left: auto;
 
-        a {
-            cursor: pointer;
+            a {
+                cursor: pointer;
+            }
         }
     }
 }
