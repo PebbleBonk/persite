@@ -144,6 +144,7 @@ const IndexPage = () => {
                             <p className={layoutStyles.fadedIn}>Toss me a message at <Link to='/projects'>myemail (a) contact.com</Link></p>
                         </div>
                     </Section>
+                    <div style={{height:'5px', backgroundColor: '#2F2F2F'}}></div>
                 </div>
             </Layout>
         </div>
