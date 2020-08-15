@@ -156,7 +156,7 @@ const IndexPage = () => {
                             <h1 className={layoutStyles.fadedIn}>Contact</h1>
                             <h2 className={layoutStyles.fadedIn}>Wanna know me better?</h2>
                             <p className={layoutStyles.fadedIn}>Nice.</p>
-                            <p className={layoutStyles.fadedIn}>Toss me a message at <Link to='/projects'>myemail (a) contact.com</Link></p>
+                            <p className={layoutStyles.fadedIn}>Toss me a message at <Link to='/404'>myemail (a) contact.com</Link></p>
                         </div>
                     </Section>
                     <div style={{height:'5px', backgroundColor: '#2F2F2F'}}></div>

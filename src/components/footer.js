@@ -1,5 +1,7 @@
 import React from 'react'
-// import { graphql, useStaticQuery } from 'gatsby'
+
+import { Link } from 'gatsby'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons'
 import { faCopyright } from '@fortawesome/free-solid-svg-icons'
@@ -10,8 +12,8 @@ const Footer = () => {
     return (
         <footer className={footerStyles.footer}>
             <span><a href='https://github.com/pebblebonk'><FontAwesomeIcon icon={faGithub} /> </a></span>
-            <span><a href='https://github.com/pebblebonk'><FontAwesomeIcon icon={faLinkedin} /> </a></span>
-            <span><a href='https://github.com/pebblebonk'><FontAwesomeIcon icon={faCopyright} /> </a></span>
+            <span><Link to='/404'><FontAwesomeIcon icon={faLinkedin} /> </Link></span>
+            <span><Link to='/404'><FontAwesomeIcon icon={faCopyright} /> </Link></span>
         </footer>
     )
 }
