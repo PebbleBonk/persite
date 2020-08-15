@@ -11,7 +11,9 @@ const Head = ({title}) => {
     `)
 
     return (
-        <Helmet title={`${title} | ${data.site.siteMetadata.title}`}/>
+        <Helmet title={`${title} ||`}>
+            <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+        </Helmet>
     )
 }
 
