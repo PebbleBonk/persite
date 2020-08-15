@@ -18,7 +18,7 @@ const Header = (props) => {
     // `)
 
     let scrollLinks;
-    if (typeof props.scrollRefs !== 'undefined' ) {
+    if (typeof props.scrollRefs !== 'undefined' && props.scrollRefs != null) {
         scrollLinks = props.scrollRefs.map(( {id, slug}) => {
             return (
                 <li key={id}>
@@ -30,7 +30,7 @@ const Header = (props) => {
         })
     }
     else {
-        scrollLinks = null;
+        scrollLinks = (<li>&nbsp;</li>);
     }
 
     return (
@@ -56,7 +56,7 @@ const Header = (props) => {
                     </ul>
                 </nav>
             </div>
-            
+
             <div className={sectionStyles.sectionBorder} style={{backgroundColor: "#2F2F2F", height: "5px"}}></div>
         </header>
 
