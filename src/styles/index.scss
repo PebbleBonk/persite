@@ -5,7 +5,6 @@
 
 html {
     font-family: 'Raleway', sans-serif;
-    font-family: "Times New Roman", Times, serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
 }
@@ -17,7 +16,7 @@ body {
     font-family: 'Raleway', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: rgb(47, 47, 47);
+    background-color: #222;
 }
 
 h1 {
@@ -31,7 +30,7 @@ h1 {
 h2 {
     font-family: 'Lobster Two', cursive;
     font-weight:900; 
-    font-style:italic;;
+    font-style:italic;
     border-bottom: 1px solid rgb(156, 155, 155);
     font-size: 28px;
 }
