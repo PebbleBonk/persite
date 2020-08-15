@@ -3,16 +3,18 @@
  */
 import React, { useState } from 'react';
 import { setSessionPassword } from '../utils/utils';
+import { faAutoprefixer } from '@fortawesome/free-brands-svg-icons';
 
 const styles = {
-  wrapper: {
-    height: '100vh',
-    background: '#424242',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center'
-  },
+  // wrapper: {
+  //   height: '100vh',
+  //   margin: 'auto',
+  //   background: '#424242',
+  //   // display: 'flex',
+  //   // flexDirection: 'column',
+  //   // justifyContent: 'center',
+  //   // alignItems: 'center'
+  // },
   input: {
     width: '100%',
     height: '48px',
@@ -56,14 +58,13 @@ const PasswordProtect = () => {
   };
 
   return (
-    <div>
 
-    <div style={styles.wrapper}>
+    <form onSubmit={onSubmit} className='wrapper'>
+    <div className='wrapper' style={{ width: '320px' }}>
       <h1 style={{ color: '#fff' }}>Welcome</h1>
       <p style={{ color: '#fff' }}>This site is still under development</p>
       <h4 style={{ color: '#fff' }}>Enter Password</h4>
 
-      <form onSubmit={onSubmit} style={{ width: '320px' }}>
         <input
           name="password"
           type="password"
@@ -83,9 +84,8 @@ const PasswordProtect = () => {
           >
           Enter
         </button>
+    </div>
       </form>
-    </div>
-    </div>
   );
 };
 
