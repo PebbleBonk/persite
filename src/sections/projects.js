@@ -17,7 +17,7 @@ const ProjectsSection = (props) => {
                         thumbnail {
                             name
                             childImageSharp {
-                                fixed(width: 100) {
+                                fixed(width: 55) {
                                     ...GatsbyImageSharpFixed
                                 }
                             }

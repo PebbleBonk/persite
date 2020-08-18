@@ -90,3 +90,16 @@ a {
 .hero {
     padding-top: 25vh;
 }
+
+// #gatsby-focus-wrapper > div {
+//     display: block !important;
+// }
+
+.wrapper {
+    height: 100vh;
+    background: #424242;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}

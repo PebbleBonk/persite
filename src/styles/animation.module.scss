@@ -1,0 +1,18 @@
+.colorFading {
+    animation: colorFade 5s ease-in infinite;
+}
+
+@keyframes colorFade {
+	0% {
+        color: #8e99b7;// #eee;
+    }
+	33% {
+        color: #FCB686;
+    }
+    66% {
+		color: #fff;// #eee;
+    }
+    100% {
+        color: #8e99b7;// #eee;
+    }
+}

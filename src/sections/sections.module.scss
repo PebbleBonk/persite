@@ -1,6 +1,6 @@
 $sectionHeight: 100vh;
 $navbar-height: 60px;
-$footer-height: 40px;
+$footer-height: 35px;
 $sectionBorderHeight: 50px; 
 $sectionWidth: 100vw;
 $backgroundColor: #004879;
@@ -14,7 +14,7 @@ $textColor: white;
 
 .halfHeight {
     min-height: calc(#{$sectionHeight}/2 - #{$navbar-height}/2);
-    max-height: calc(#{$sectionHeight}/2 - #{$navbar-height}/2); //calc(#{$sectionHeight}/2 - #{$navbar-height}/2 - 2*#{$sectionBorderHeight});
+    // max-height: calc(#{$sectionHeight}/2 - #{$navbar-height}/2); //calc(#{$sectionHeight}/2 - #{$navbar-height}/2 - 2*#{$sectionBorderHeight});
 }
 
 .fullHeight {

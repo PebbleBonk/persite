@@ -1,9 +1,9 @@
 {
-  "name": "gatsby-starter-hello-world",
+  "name": "persite",
   "private": true,
-  "description": "A simplified bare-bones starter for Gatsby",
+  "description": "A simple personal portfolio site",
   "version": "0.1.0",
-  "license": "0BSD",
+  "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop-server": "env-cmd -f .env.development gatsby develop -H 192.168.1.146 -p 8000",
@@ -19,6 +19,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.13.1",
     "@fortawesome/free-solid-svg-icons": "^5.13.1",
     "@fortawesome/react-fontawesome": "^0.1.11",
+    "@mkitio/gatsby-theme-password-protect": "^2.1.2",
     "gatsby": "^2.23.12",
     "gatsby-image": "^2.4.13",
     "gatsby-plugin-fontawesome-css": "^1.0.0",

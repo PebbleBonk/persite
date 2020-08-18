@@ -76,7 +76,7 @@ const IndexPage = () => {
                         <h2 className={layoutStyles.fadedIn}>I am Olli</h2>
                     </div>
 
-                    <ScrollLink to={'about'} spy={true} smooth={true} offset={-47} duration={800} >
+                    <ScrollLink to={'about'} spy={true} smooth={true} offset={-40} duration={800} >
                         <FontAwesomeIcon icon={faChevronDown} size="2x" className="hero-scroll"/>
                     </ScrollLink>
                 </Div100vh>
@@ -89,22 +89,27 @@ const IndexPage = () => {
 
                     
                     <Section title='About' id='about' img={imgs[img_idx[0]]} solid={true} height="half">
-                        <h2 className={layoutStyles.fadedIn}>What do I do?</h2>
-                        <p>
-                            Lorem dolore mollit dolor aliqua eu nostrud quis laborum aliquip.<br/>
-                            Incididunt officia fugiat cillum ullamco ad adipisicing cupidatat <br/>
-                            qui deserunt do irure ad. Laboris ex qui labore duis Lorem tempor 
-                        </p>
-                        <ol>
-                            <li  data-sal="slide-right">Coding</li>
-                            <li  data-sal="slide-right">Finding</li>
-                            <li  data-sal="slide-right">Design</li>
-                        </ol>
+                        <div                        
+                            data-sal="slide-up"
+                            data-sal-delay="300"
+                            data-sal-easing="ease">
+                            <h2 className={layoutStyles.fadedIn}>What do I do?</h2>
+                            <p>
+                                Lorem dolore mollit dolor aliqua eu nostrud quis laborum aliquip.<br/>
+                                Incididunt officia fugiat cillum ullamco ad adipisicing cupidatat <br/>
+                                qui deserunt do irure ad. Laboris ex qui labore duis Lorem tempor 
+                            </p>
+                            <ol>
+                                <li  data-sal="slide-right">Coding</li>
+                                <li  data-sal="slide-right">Finding</li>
+                                <li  data-sal="slide-right">Design</li>
+                            </ol>
+                        </div>
                     </Section>
 
                     <Section title='What can I do?' id='skills' img={imgs[img_idx[2]]} solid={false} height="half">
                         <div                        
-                            data-sal="fade"
+                            data-sal="slide-up"
                             data-sal-delay="300"
                             data-sal-easing="ease">
                             <p>I like doing stuff. Different types of stuffs. </p>
@@ -121,15 +126,25 @@ const IndexPage = () => {
                 
                     <Section title='Projects' id='projects' img={imgs[img_idx[2]]} style={sectionStyles.projects} solid={true}>
                         <FeaturedSection>
-                            <h2>Featured projects</h2>
-                            <p>These are some projects I could say I am proud of.</p>
+                            <div                        
+                                data-sal="slide-up"
+                                data-sal-delay="300"
+                                data-sal-easing="ease">
+                                <h2>Featured projects</h2>
+                                <p>These are some projects I could say I am proud of.</p>
+                            </div>
                         </FeaturedSection>
                         <ProjectsSection>
-                            <h2>Misc. projects</h2>
-                            <p>
-                            These are some other projects I've worked on, which might not be so polished, 
-                            but still worth checking out
-                            </p>
+                            <div                        
+                                data-sal="slide-up"
+                                data-sal-delay="300"
+                                data-sal-easing="ease">
+                                <h2>Misc. projects</h2>
+                                <p>
+                                These are some other projects I've worked on, which might not be so polished, 
+                                but still worth checking out
+                                </p>
+                            </div>
                         </ProjectsSection>
                     </Section>
                 
@@ -141,9 +156,10 @@ const IndexPage = () => {
                             <h1 className={layoutStyles.fadedIn}>Contact</h1>
                             <h2 className={layoutStyles.fadedIn}>Wanna know me better?</h2>
                             <p className={layoutStyles.fadedIn}>Nice.</p>
-                            <p className={layoutStyles.fadedIn}>Toss me a message at <Link to='/projects'>myemail (a) contact.com</Link></p>
+                            <p className={layoutStyles.fadedIn}>Toss me a message at <Link to='/404'>myemail (a) contact.com</Link></p>
                         </div>
                     </Section>
+                    <div style={{height:'5px', backgroundColor: '#2F2F2F'}}></div>
                 </div>
             </Layout>
         </div>

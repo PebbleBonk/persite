@@ -20,7 +20,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-scroll-reveal`,
       options: {
-          threshold: 0.75, // Percentage of an element's area that needs to be visible to launch animation
+          threshold: 0.5, // Percentage of an element's area that needs to be visible to launch animation
           once: true, // Defines if animation needs to be launched once
           disable: false, // Flag for disabling animations
           
@@ -45,7 +45,7 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'images',
-        path: path.join(__dirname, 'resources', 'img')
+        path: path.join(__dirname, 'static', 'img')
       }
     },
     `gatsby-transformer-sharp`,
@@ -62,6 +62,12 @@ module.exports = {
             }
           }
         ]
+      }
+    },
+    {
+      resolve: '@mkitio/gatsby-theme-password-protect',
+      options: {
+        password: 'uuddlrlrbas' // delete or `undefined` to disable password protection
       }
     }
   ],
