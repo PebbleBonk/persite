@@ -1,13 +1,11 @@
 ---
 title: "Heat maps of the Europe"
 date: "6.9.2020"
-cover: ./heatmap_cover.png
+cover: ./heatmap_cover.jpg
 thumbnail: ./heatmap.png
 ---
 
 
-
-# Heat maps!
 >Previously last year I collaborated with [shaderism](www.shaderism.com) on a project [UrbanGarden](www.urbangarden.com). The idea was to make an app for consumers to analyse the sunlight amount in their yards over the year,  as well as to provide relevant information about the environment. One piece of information were to be the dates of frost and drought. Extracting these from the data we had access to, however, was not as trivial as I had hoped.
 
 

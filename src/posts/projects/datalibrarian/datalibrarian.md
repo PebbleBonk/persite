@@ -7,15 +7,13 @@ thumbnail: ./dl_logo.png
 
 
 
-
-# DataLibrarian	
-This project was one of those ”this will be a tad too much” ones. As I was working on the [CropperHead](/projects/cropperhead) project, I realised that I needed more training data – a lot more. 
-
-First, I naturally tried to rely on my friends: by asking them to dive into their dark, tech side and export me their libraries of photos that had been cropper. Practically the same that I had done with the [PhotoAnnotator] tool. 
-
-However, this proved a tad cumbersome, as the crop info I had extracted was only applicable for those performed with Adobe Lightroom. 
-
-So, I decided to give an opportunity for the end users to help me gather the much needed data – crowdsourcing at its best!
+>This project was one of those ”this will be a tad too much” ones. As I was working on the [CropperHead](/projects/cropperhead) project, I realised that I needed more training data – a lot more. 
+>
+>First, I naturally tried to rely on my friends: by asking them to dive into their dark, tech side and export me their libraries of photos that had been cropper. Practically the same that I had done with the [PhotoAnnotator] tool. 
+>
+>However, this proved a tad cumbersome, as the crop info I had extracted was only applicable for those performed with Adobe Lightroom. 
+>
+>So, I decided to give an opportunity for the end users to help me gather the much needed data – crowdsourcing at its best!
 
 ## Needs
 To collect the data effectively, I would need means to record the preferred crop at the UI, a backend to sort and validate the data and finally places to store the items. The UI I implemented in the [CropperHead UI project].  For the storage, I went with mongoDB for the labels and AWS S3 free tier for the images.  The basic architecture and plans are shown in image below.
