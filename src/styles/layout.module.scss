@@ -73,6 +73,7 @@
 
 .aboutContent {
 	display: flex;
+	margin-top: 2rem;
 	margin-bottom: 3rem;
 }
 
@@ -81,7 +82,8 @@
 }
 @media only screen and (max-width: 905px) {
     .aboutContent {
-        display: block;
+		display: block;
+		margin-bottom: 6rem;
 	}
 	.circularPhoto {
 		margin: 0 auto 3rem auto;

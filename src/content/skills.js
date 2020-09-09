@@ -8,13 +8,11 @@ const ContentOfSkills = () => {
             data-sal-delay="300"
             data-sal-easing="ease">
             <p>I like doing stuff. Different types of stuffs. </p>
+
             <p>
-            Ut aliquip commodo mollit quis ad aliqua qui. 
-            </p>
-            <p>
-            Lorem dolore mollit dolor aliqua eu nostrud quis laborum aliquip.<br/>
-            Incididunt officia fugiat cillum ullamco ad adipisicing cupidatat <br/>
-            qui deserunt do irure ad. Laboris ex qui labore duis Lorem tempor 
+            I have a Master's degree in electrical engineering from Aalto University (FI) <br/>
+                Additionally, I have work experience from multiple different industries and 
+                excel in learning new things fast. 
             </p>
         </div>
     )
