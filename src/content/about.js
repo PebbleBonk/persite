@@ -6,25 +6,45 @@ import layoutStyles from '../styles/layout.module.scss'
 
 const ContentOfAbout = () => {
     return (
-        <div                        
-            data-sal="slide-up"
-            data-sal-delay="300"
-            data-sal-easing="ease">
-            <h2 className={layoutStyles.fadedIn}>An innovative software engineer!</h2>
-            <p>
-                I come from eastern Finland, and am currently based in Espoo.<br/>
-                I have a Master's degree in electrical engineering from Aalto University (FI) <br/>
-                And I am passionate of many things, mainly: 
-            </p>
-            <ul class="fa-ul">
-                <li  data-sal="slide-right"><FontAwesomeIcon fixedWidth icon={faLightbulb}/>  Innovation</li>
-                <li  data-sal="slide-right"><FontAwesomeIcon fixedWidth icon={faProjectDiagram}/>  Holism</li>
-                <li  data-sal="slide-right"><FontAwesomeIcon fixedWidth icon={faChartBar}/>  Data</li>
-                <li  data-sal="slide-right"><FontAwesomeIcon fixedWidth icon={faEye}/>  Visualisation</li>
+        <React.Fragment>
+            <div   
+                style={{
+                    maxWidth: "450px",
+                    paddingLeft:"3rem",
+                    // paddingRight:"6rem"
+                }}                     
+                data-sal="slide-up"
+                data-sal-delay="300"
+                data-sal-easing="ease">
+                <p>A broad-skilled software engineer!</p>
+                <p>
+                    Originating from eastern Finland, and currently based in Espoo.
+                </p>
+                <p>
+                    I like to work with things that are new: creating innovative solutions and trying to find
+                    those real-life cheat codes are tasks that bring the best out of me.
+                </p>
+                <p>
+                    Expecially the following inspire me:
+                </p>
+            </div>
+            <ul className="fa-ul">
+                <li  data-sal="slide-righ" className={layoutStyles.pillButton}>
+                    <FontAwesomeIcon fixedWidth icon={faLightbulb}/>  Innovation
+                </li>
+                <li  data-sal="slide-righ" className={layoutStyles.pillButton}>
+                    <FontAwesomeIcon fixedWidth icon={faProjectDiagram}/>  Holism
+                </li>
+                <li  data-sal="slide-righ" className={layoutStyles.pillButton}>
+                    <FontAwesomeIcon fixedWidth icon={faEye}/>  Visualisation
+                </li>
+                <li  data-sal="slide-righ" className={layoutStyles.pillButton}>
+                    <FontAwesomeIcon fixedWidth icon={faChartBar}/>  Data
+                </li>
             </ul>
-        </div>
+        </React.Fragment>
     )
 }
-
+   
 
 export default ContentOfAbout
