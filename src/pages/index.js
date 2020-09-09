@@ -79,7 +79,7 @@ const IndexPage = () => {
                 <Head title='Home'/>
                 <div className="sectionsGrid">
 
-                    <Section title='Wait, who?' id='about' img={imgs[img_idx[0]]} solid={true} height="full">
+                    <Section title='Wait, who?' id='about' img={imgs[img_idx[0]]} solid={true} height="half">
                         <ContentOfAbout/>
                     </Section>
 
