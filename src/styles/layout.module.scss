@@ -58,3 +58,27 @@
 	margin: 1rem;
 	border-radius: 20px;
 }
+
+.circularPhoto {
+	// margin-left: auto;
+	img {
+		border-radius: 50%;
+		
+	}
+	width: 200px;
+	height: 200px;
+	margin-left: 1rem;
+}
+
+.aboutContent {
+	display: flex;
+}
+
+@media only screen and (max-width: 650px) {
+    .aboutContent {
+        display: block;
+	}
+	.circularPhoto {
+		margin: 0 auto 3rem auto;
+	}
+}
