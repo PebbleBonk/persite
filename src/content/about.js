@@ -55,25 +55,25 @@ const ContentOfAbout = () => {
                         </p>
                     </div>
                     <div>
-                        <div  data-sal="slide-righ" className={layoutStyles.pillButton}>
+                        <div className={layoutStyles.pillButton}>
                             <FontAwesomeIcon fixedWidth icon={faLightbulb}/>&nbsp;&nbsp;Innovation
                         </div>
-                        <div  data-sal="sdivde-righ" className={layoutStyles.pillButton}>
+                        <div className={layoutStyles.pillButton}>
                             <FontAwesomeIcon fixedWidth icon={faProjectDiagram}/>&nbsp;&nbsp;Holism
                         </div>
-                        <div  data-sal="sdivde-righ" className={layoutStyles.pillButton}>
+                        <div className={layoutStyles.pillButton}>
                             <FontAwesomeIcon fixedWidth icon={faEye}/>&nbsp;&nbsp;Visualisation
                         </div>
-                        <div  data-sal="sdivde-righ" className={layoutStyles.pillButton}>
+                        <div className={layoutStyles.pillButton}>
                             <FontAwesomeIcon fixedWidth icon={faChartBar}/>&nbsp;&nbsp;Data
                         </div>
-                        <div  data-sal="sdivde-righ" className={layoutStyles.pillButton}>
+                        <div className={layoutStyles.pillButton}>
                             <FontAwesomeIcon fixedWidth icon={faRobot}/>&nbsp;&nbsp;Automation
                         </div>
-                        <div  data-sal="sdivde-righ" className={layoutStyles.pillButton}>
+                        <div className={layoutStyles.pillButton}>
                             <FontAwesomeIcon fixedWidth icon={faClock}/>&nbsp;&nbsp;Idling
                         </div>
-                        <div  data-sal="sdivde-righ" className={layoutStyles.pillButton}>
+                        <div className={layoutStyles.pillButton}>
                             <FontAwesomeIcon fixedWidth icon={faAtom}/>&nbsp;&nbsp;Details
                         </div>
                     </div>     
