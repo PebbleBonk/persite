@@ -7,8 +7,8 @@ import featuredStyles from './featured.module.scss'
 const FeaturedSection = (props) => {
     const mddata = useStaticQuery(graphql`
     query {
-        # (filter: {fileAbsolutePath: {regex: "/(featured)/"  }})
-        allMarkdownRemark {
+        allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/(featured)/"  }}) {
+        # allMarkdownRemark {
             edges {
                 node {
                     frontmatter {
@@ -16,7 +16,7 @@ const FeaturedSection = (props) => {
                         date
                         cover {
                             childImageSharp {
-                                fluid(maxWidth: 800) {
+                                fluid(maxWidth: 1200) {
                                     ...GatsbyImageSharpFluid
                                 }
                             }
