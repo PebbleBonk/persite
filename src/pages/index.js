@@ -13,6 +13,8 @@ import { RandSet } from '../utilities/utils'
 // Styles:
 import '../styles/index.scss'
 import sectionStyles from '../sections/sections.module.scss'
+import 'prismjs/themes/prism-tomorrow.css';
+import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
 
 // Contents:
 import Hero from '../content/hero'
