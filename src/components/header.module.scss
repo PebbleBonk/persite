@@ -5,6 +5,7 @@ $navbar-height: 40px;
 }
 
 
+
 .header {
     height: $navbar-height;
     box-shadow: 1rem 1rem 2rem rgba(0,0,0,0.2);
@@ -38,6 +39,7 @@ $navbar-height: 40px;
         .sections {
             background-color: rgb(47, 47, 47);
             margin-left: auto;
+            padding-right: 1rem;
 
             a {
                 cursor: pointer;
@@ -65,7 +67,7 @@ $navbar-height: 40px;
 
 .nav-item {
     color: #8e99b7;// #eee;
-    font-size: .9rem;
+    font-size: 1.1rem;
     margin-right: 1.3rem;
     text-decoration: none;
 }

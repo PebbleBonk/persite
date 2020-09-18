@@ -7,8 +7,8 @@ import featuredStyles from './featured.module.scss'
 const FeaturedSection = (props) => {
     const mddata = useStaticQuery(graphql`
     query {
-        # (filter: {fileAbsolutePath: {regex: "/(featured)/"  }})
-        allMarkdownRemark {
+        allMarkdownRemark (filter: {fileAbsolutePath: {regex: "/(featured)/"  }}) {
+        # allMarkdownRemark {
             edges {
                 node {
                     frontmatter {
@@ -16,7 +16,7 @@ const FeaturedSection = (props) => {
                         date
                         cover {
                             childImageSharp {
-                                fluid(maxWidth: 800) {
+                                fluid(maxWidth: 1200) {
                                     ...GatsbyImageSharpFluid
                                 }
                             }
@@ -41,7 +41,7 @@ const FeaturedSection = (props) => {
                     return (
                         <Link to={linkto} className={featuredStyles.featured} key={edge.node.frontmatter.title}
                               data-sal="slide-up" data-sal-duration="500" data-sal-easing="ease">
-                                <Img fluid={edge.node.frontmatter.cover.childImageSharp.fluid} alt={edge.node.frontmatter.title}/>
+                                <Img fluid={edge.node.frontmatter.cover.childImageSharp.fluid} alt={edge.node.frontmatter.title} className={featuredStyles.coverImage}/>
                                 <div className={featuredStyles.projectTag}>
                                     <h3>{edge.node.frontmatter.title}</h3>
                                     <p>{edge.node.frontmatter.date}</p>

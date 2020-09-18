@@ -1,5 +1,6 @@
 .projectContainer {
     display: grid;
+    max-width: 1200px;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: 1.5rem;
     margin: 0;
@@ -24,6 +25,7 @@
 }
 
 .featured {
+    box-shadow: 2px 5px 10px 0 black ;
     box-sizing: border-box;
     height: 250px;
     overflow: hidden;
@@ -33,6 +35,10 @@
 
     > div {
         width: 100%;
+    }
+
+    > .coverImage {
+        height: 100%;
     }
 }
 
