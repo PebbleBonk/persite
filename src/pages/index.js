@@ -15,6 +15,7 @@ import '../styles/index.scss'
 import sectionStyles from '../sections/sections.module.scss'
 import 'prismjs/themes/prism-tomorrow.css';
 import 'prismjs/plugins/line-numbers/prism-line-numbers.css'
+import "prismjs/plugins/command-line/prism-command-line.css"
 import  '../styles/prism.override.scss'
 
 // Contents:
@@ -82,11 +83,11 @@ const IndexPage = () => {
                 <Head title='Home'/>
                 <div className="sectionsGrid">
 
-                    <Section title='Wait, who?' id='about' img={imgs[img_idx[0]]} solid={true} height="half">
+                    <Section title='Wait, who?' id='about' img={imgs[img_idx[0]]} solid={true} centered={true} height="half">
                         <ContentOfAbout/>
                     </Section>
 
-                    <Section title='What can I do?' id='skills' img={imgs[img_idx[2]]} solid={false} height="half">
+                    <Section title='What can I do?' id='skills' img={imgs[img_idx[2]]} solid={false} centered={true} height="half">
                         <ContentOfSkills/>
                     </Section>
                 
