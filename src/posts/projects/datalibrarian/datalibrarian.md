@@ -24,13 +24,13 @@ For the backend server, I needed a system that could effectively take incoming d
 ## The design!
 I started with simple REST API in mind: the service would take in the image and labels with a PUT call and return a success or error based on a few cases where it went wrong. I.e., in its simplicity:
 
-	1. Receive the image as base64 encoded string
-	2. Receive the labels as json
-	3. Validate the image
-	4. Validate the labels
-	5. Send the image to S3
-	6. Send the labels to MongoDB
-	7. Return a HTTP status code on whether the validations and uploads were successful.
+1. Receive the image as base64 encoded string
+2. Receive the labels as json
+3. Validate the image
+4. Validate the labels
+5. Send the image to S3
+6. Send the labels to MongoDB
+7. Return a HTTP status code on whether the validations and uploads were successful.
 
 Seems simple enough, right!
 
@@ -55,7 +55,7 @@ So,  I added functionality to specify your own S3 instances, as well as your own
 As mentioned in the intro, I wanted to make the service scalable from the get go. Some features I added just for this reason:
 	1. Configuration with environment variables
 	2. Unique Identifiers for the received images
-	
+
 ## The result
 And lo and behold, it worked! I could use several clients to send data simultaneously to the service,and it would snappily process them. I did not do a full stress test for the system, but I added a pop–up to the UI informing the user whether the update was successful or not.
 

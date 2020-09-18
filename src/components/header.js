@@ -4,6 +4,7 @@ import { Link } from 'gatsby'
 // import Nav from 'react-bootstrap/Nav'
 import headerStyles from './header.module.scss'
 import sectionStyles from '../sections/sections.module.scss'
+import animationStyles from '../styles/animation.module.scss'
 
 // from: https://www.digitalocean.com/community/tutorials/how-to-implement-smooth-scrolling-in-react
 import { Link as ScrollLink } from "react-scroll";
@@ -42,9 +43,9 @@ const Header = (props) => {
                 <div className={headerStyles.brand}>
                     <Link to="/" >
                         <div className={sectionStyles.firstColumn} style={{backgroundColor: "inherit"}}></div>
-                        <div className={sectionStyles.transparentColumn} style={{backgroundColor: "rgba(255,255,255,0.2)"}}></div>
+                        <div className={`${sectionStyles.transparentColumn} ${animationStyles.backgrounColorGradient}`} style={{backgroundColor: "rgba(255,255,255,0.2)"}}></div>
                         <div className={sectionStyles.midColumn} style={{backgroundColor: "inherit"}}></div>
-                        <div className={sectionStyles.transparentColumn} style={{backgroundColor: "rgba(255,255,255,0.2)"}}></div>
+                        <div className={`${sectionStyles.transparentColumn} ${animationStyles.backgrounColorGradient}`} style={{backgroundColor: "rgba(255,255,255,0.2)"}}></div>
                         <div className={sectionStyles.firstColumn} style={{backgroundColor: "inherit"}}></div>
                     </Link>
                     <div className={sectionStyles.contentColumn} style={{backgroundColor: "inherit"}}></div>
