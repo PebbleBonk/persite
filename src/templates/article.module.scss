@@ -78,7 +78,7 @@
 
     a {
         text-decoration: none;
-        font-size: 0.8rem;
+        font-size: 0.9rem;
     }
 
     .navPrev, .navNext, .navBack{
@@ -116,6 +116,9 @@
     .navWrapper {
         margin-top: 0.5rem;
         flex-direction: column;
+        a {
+            font-size: 1.2rem;
+        }
     }
     .navPrev, .navNext, .navBack {
         margin: 0.5rem;
