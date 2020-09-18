@@ -8,8 +8,6 @@ const ContentOfSkills = () => {
                         data-sal="slide-up"
                         data-sal-delay="300"
                         data-sal-easing="ease">
-                <p>I like doing stuff. Different types of stuffs. </p>
-
                 <p>
                 I have a Master's degree from <b>Aalto University</b> (FI), where I majored in <b>Control, Robotics and Autonomous systems.</b> <br/>
                     Additionally, I have work experience from multiple different industries and 
