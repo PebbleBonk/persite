@@ -81,6 +81,12 @@ module.exports = {
             aliases: {},
             showLineNumbers: true,
             noInlineHighlight: false,
+            // Customize the prompt used in shell output
+            // Leave empty to hide prompts
+            prompt: {
+              user: "root",
+              host: "localhost",
+            },
           },
         }]
       }
