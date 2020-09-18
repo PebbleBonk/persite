@@ -28,7 +28,7 @@ But wait a second. All 2D maps have been projected from the spherical surface. H
 
 
 
-
+  
 ## One done, only... 32 left...
 It turned out that we could use the same system to provide information and hence the service,for the entire Europe area should I be able to convert a bunch of other countries as well. All of them to be precise.
 
