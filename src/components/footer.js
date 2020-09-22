@@ -11,9 +11,9 @@ import footerStyles from './footer.module.scss'
 const Footer = () => {
     return (
         <footer className={footerStyles.footer}>
-            <span><a href='https://github.com/pebblebonk'><FontAwesomeIcon icon={faGithub} /> </a></span>
+            <span><a href='https://github.com/pebblebonk/persite'><FontAwesomeIcon icon={faGithub} /> </a></span>
+            <span>&copy; 2020 Olli Riikonen</span>
             <span><Link to='/404'><FontAwesomeIcon icon={faLinkedin} /> </Link></span>
-            <span><Link to='/404'><FontAwesomeIcon icon={faCopyright} /> </Link></span>
         </footer>
     )
 }
