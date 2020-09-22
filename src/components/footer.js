@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons'
-import { faCopyright } from '@fortawesome/free-solid-svg-icons'
 
 import footerStyles from './footer.module.scss'
 
