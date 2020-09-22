@@ -1,5 +1,8 @@
 import React from 'react'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLanguage, faToolbox} from '@fortawesome/free-solid-svg-icons'
+import { faTools, faMicrochip} from '@fortawesome/free-solid-svg-icons'
 
 const SkillList = (props) => {
     return (
@@ -23,7 +26,7 @@ const ContentOfSkills = () => {
 
             <div style={{display: "flex", flexWrap: "wrap"}}>
                 <SkillList>
-                        <b>Languages I am fluent in:</b>
+                        <b> <FontAwesomeIcon icon={faLanguage}/>Languages:</b>
                         <ul>
                             <li>Python</li>
                             <li>C/C++</li>
@@ -35,7 +38,7 @@ const ContentOfSkills = () => {
                 </SkillList>
 
                 <SkillList>
-                    <b >Frameworks I've tinkered with:</b>
+                    <b><FontAwesomeIcon icon={faToolbox}/>Frameworks:</b>
                     <ul>
                         <li>React</li>
                         <li>Gatsby</li>
@@ -47,7 +50,7 @@ const ContentOfSkills = () => {
                 </SkillList>
 
                 <SkillList>
-                    <b>Tools I have discovered:</b>
+                    <b><FontAwesomeIcon icon={faTools}/> Tools:</b>
                     <ul>
                         <li>Git</li>
                         <li>Bash</li>
@@ -57,7 +60,7 @@ const ContentOfSkills = () => {
                 </SkillList>
 
                 <SkillList>
-                    <b>Hardware I have played with:</b>
+                    <b><FontAwesomeIcon icon={faMicrochip}/>Hardware:</b>
                     <ul>
                         <li>Raspberry Pi</li>
                         <li>Diddyborg</li>
