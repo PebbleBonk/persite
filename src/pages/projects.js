@@ -4,6 +4,8 @@ import { Link, graphql, useStaticQuery } from 'gatsby'
 import Layout from '../components/layout'
 import Head from '../components/head'
 
+import ContentOfProjects from '../content/projects'
+
 import projectsStyles from './projects.module.scss'
 
 const ProjectsPage = () => {
@@ -27,21 +29,13 @@ const ProjectsPage = () => {
 
     return (
         <Layout>
-            <Head title='Projects'/>
-            <h1>This is the home of projects</h1>
-            <ol className={projectsStyles.projects}>
-                {mddata.allMarkdownRemark.edges.map((edge) => {
-                    const linkto = `/projects/${edge.node.fields.slug}`
-                    return (
-                    <li className={projectsStyles.project} key={edge.node.frontmatter.title}>
-                        <Link to={linkto}>
-                            <h2>{edge.node.frontmatter.title}</h2>
-                            <p>{edge.node.frontmatter.date}</p>
-                        </Link>
-                    </li>
-                    )
-                })}
-            </ol>
+            <div className={projectsStyles.projects}>
+                <Head title='Projects'/>
+                <h1>Projects I have been crushing</h1>
+                <div className={projectsStyles.content}>
+                    <ContentOfProjects/>
+                </div>
+            </div>
         </Layout>
     )
 }

@@ -38,7 +38,7 @@ const ProjectsSection = (props) => {
 
             <div className={projectsStyles.projects}>
                 {mddata.allMarkdownRemark.edges.map((edge) => {
-                    const linkto = `/projects/${edge.node.fields.slug}`
+                    const linkto = `/projects/${edge.node.fields.slug}#article-content`
                     
                     return (
                             <Link to={linkto} className={projectsStyles.project} key={edge.node.frontmatter.title}
