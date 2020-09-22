@@ -3,6 +3,7 @@ title: "Heat maps of Europe"
 date: "6.9.2020"
 cover: ./heatmap_cover.jpg
 thumbnail: ./heatmap.png
+githubLink: https://www.github.com/PebbleBonk/HeatMaps
 ---
 
 
