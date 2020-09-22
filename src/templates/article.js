@@ -63,8 +63,8 @@ const Article = ({ data, pageContext }) => {
         <Layout>
             <div className={articleStyles.articleWrapper}>
                 {navWrap}
-                <div className={articleStyles.navSeparator}/>
-                <div className={articleStyles.article} id="article-content">
+                <div className={articleStyles.navSeparator} id="article-content"/>
+                <div className={articleStyles.article}>
                     <Img className={articleStyles.coverImg} fluid={data.markdownRemark.frontmatter.cover.childImageSharp.fluid} alt={data.markdownRemark.frontmatter.title}/>
                     <h1>{data.markdownRemark.frontmatter.title}</h1>
                     <p className={articleStyles.date}>{data.markdownRemark.frontmatter.date}</p>
