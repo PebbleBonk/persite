@@ -40,21 +40,21 @@ const Article = ({ data, pageContext }) => {
     const navWrap = (
         <div className={articleStyles.navWrapper}>
         <div className={articleStyles.navPrev}>
-        {prev && (
-            <Link to={prev.path}>
-                <FontAwesomeIcon icon={faLongArrowAltLeft} /> {prev.title}
-            </Link>
-        )}
+            {prev && (
+                <Link to={prev.path}>
+                    <FontAwesomeIcon icon={faLongArrowAltLeft} /> {prev.title}
+                </Link>
+            )}
         </div>
         <div className={articleStyles.navBack}>
             <Link to="/#projects">Home</Link>
         </div>
         <div className={articleStyles.navNext}>
-        {next && (
-            <Link to={next.path}>
-                {next.title} <FontAwesomeIcon icon={faLongArrowAltRight} /> 
-            </Link>
-        )}
+            {next && (
+                <Link to={next.path}>
+                    {next.title} <FontAwesomeIcon icon={faLongArrowAltRight} /> 
+                </Link>
+            )}
         </div>
     </div>
     )
@@ -63,8 +63,8 @@ const Article = ({ data, pageContext }) => {
         <Layout>
             <div className={articleStyles.articleWrapper}>
                 {navWrap}
-
-                <div className={articleStyles.article}>
+                <div className={articleStyles.navSeparator}/>
+                <div className={articleStyles.article} id="article-content">
                     <Img className={articleStyles.coverImg} fluid={data.markdownRemark.frontmatter.cover.childImageSharp.fluid} alt={data.markdownRemark.frontmatter.title}/>
                     <h1>{data.markdownRemark.frontmatter.title}</h1>
                     <p className={articleStyles.date}>{data.markdownRemark.frontmatter.date}</p>
