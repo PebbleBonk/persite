@@ -38,8 +38,14 @@ As I was not satisfied with any available portfolio/personal website templates, 
     └── img                   # Static images
 ```
 
+### Start it up!
+Simply having `npm` and `Gatsby` installed, run:
+
+```bash
+npm run develop
+```
 
 ## Usage/License
-Feel free to browse and use any bits of code you find useful! I do not consider myself a professional in such front-end design/development, so please take any content with a grain of salt. The code is copyrighted 2020 Olli Riikonen under the MIT license, but any nudge towards me if you found something useful is appreciated 😉
+Feel free to browse and use any bits of code you find useful! I do not consider myself a professional in such front-end design/development, so please take any content with a grain of salt. The code is copyrighted 2020 Olli Riikonen under the MIT license, but any nudge towards me if you found something useful is appreciated 😉 (See the *LICENSE* file for more details)
 
 However, as the repository, at the time being, also includes the images and project description content as is, they are copyrighted Olli Riikonen and used by permission for this project only.
