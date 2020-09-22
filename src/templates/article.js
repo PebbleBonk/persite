@@ -46,9 +46,9 @@ const Article = ({ data, pageContext }) => {
             </Link>
         )}
         </div>
-        {/* <div className={articleStyles.navBack}>
-            <Link to="/">Home</Link>
-        </div> */}
+        <div className={articleStyles.navBack}>
+            <Link to="/#projects">Home</Link>
+        </div>
         <div className={articleStyles.navNext}>
         {next && (
             <Link to={next.path}>
