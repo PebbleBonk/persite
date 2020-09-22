@@ -72,6 +72,12 @@ a {
     color: #dbe5ff;
 }
 
+// Links to personal github:
+a[href^="http://github.com/PebbleBonk/"] {
+    /* fully valid URL, likely external link */
+}
+
+
 .hero-scroll {
     color: white;
     height: 100px;

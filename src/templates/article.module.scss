@@ -7,6 +7,20 @@
     margin: auto;
 }
 
+.repoLink {
+    margin: 2rem 0 3rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    a {
+        margin: auto;
+        color: black;
+        text-decoration: none;
+
+    }
+}
+
 .article {
     background-color: white;
     
@@ -80,7 +94,7 @@
     margin: auto;
     padding-top: 1rem;
     padding-bottom: 1rem;
-    
+
     a {
         text-decoration: none;
         font-size: 0.9rem;

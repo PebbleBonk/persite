@@ -30,7 +30,10 @@ exports.createPages = async ({ graphql, actions }) => {
         ){
             edges {
                 node {
-                    frontmatter {title}
+                    frontmatter {
+                        title,
+                        githubLink
+                    }
                     fields {
                         slug
                     }
@@ -51,6 +54,7 @@ exports.createPages = async ({ graphql, actions }) => {
             path: curr.path,
             context: {
                 slug: curr.slug,
+                githubLInk: curr.githubLink,
                 navContext: {next: next, prev: prev}
             }
         }
@@ -67,7 +71,8 @@ const getNavContext = (edge) => {
     return {
         path: `/projects/${edge.node.fields.slug}`,
         title: edge.node.frontmatter.title,
-        slug: edge.node.fields.slug
+        slug: edge.node.fields.slug,
+        githubLink: edge.node.frontmatter.githubLink
     }
 }
 
