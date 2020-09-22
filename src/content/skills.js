@@ -15,10 +15,7 @@ const ContentOfSkills = () => {
                 </p>
             </div>
 
-            <div style={{display: "flex", flexWrap: "wrap"}}
-                        data-sal="slide-up"
-                        data-sal-delay="300"
-                        data-sal-easing="ease">
+            <div style={{display: "flex", flexWrap: "wrap"}}>
                 <div style={{padding:"1rem"}}>
                     <b>Languages I am comfortable with:</b>
                     <ul>
