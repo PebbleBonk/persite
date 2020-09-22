@@ -6,7 +6,7 @@ import layoutStyles from '../styles/layout.module.scss'
 
 const ContentOfContact = () => {
     return (
-        <div data-sal="slide-up" data-sal-easing="ease">
+        <div data-sal="slide-up" data-sal-easing="ease" style={{maxWidth: "400px"}}>
                 <h1  data-sal="slide-up" data-sal-easing="ease">Contact</h1>
                 <h2  data-sal="slide-up" data-sal-easing="ease">Wanna know me better?</h2>
                 <p  data-sal="slide-up" data-sal-easing="ease">Nice.</p>
