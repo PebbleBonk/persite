@@ -37,7 +37,7 @@ const FeaturedSection = (props) => {
             <div className={featuredStyles.projectContainer}>
 
                 {mddata.allMarkdownRemark.edges.map((edge) => {
-                    const linkto = `/projects/${edge.node.fields.slug}`
+                    const linkto = `/projects/${edge.node.fields.slug}#article-content`
                     return (
                         <Link to={linkto} className={featuredStyles.featured} key={edge.node.frontmatter.title}
                               data-sal="slide-up" data-sal-duration="500" data-sal-easing="ease">

@@ -56,25 +56,25 @@ const ContentOfAbout = () => {
                     </div>
                     <div>
                         <div className={layoutStyles.pillButton}>
-                            <FontAwesomeIcon fixedWidth icon={faLightbulb}/>&nbsp;&nbsp;Innovation
+                            <FontAwesomeIcon fixedWidth icon={faLightbulb}/>Innovation
                         </div>
                         <div className={layoutStyles.pillButton}>
-                            <FontAwesomeIcon fixedWidth icon={faProjectDiagram}/>&nbsp;&nbsp;Holism
+                            <FontAwesomeIcon fixedWidth icon={faProjectDiagram}/>Holism
                         </div>
                         <div className={layoutStyles.pillButton}>
-                            <FontAwesomeIcon fixedWidth icon={faEye}/>&nbsp;&nbsp;Visualisation
+                            <FontAwesomeIcon fixedWidth icon={faEye}/>Visualisation
                         </div>
                         <div className={layoutStyles.pillButton}>
-                            <FontAwesomeIcon fixedWidth icon={faChartBar}/>&nbsp;&nbsp;Data
+                            <FontAwesomeIcon fixedWidth icon={faChartBar}/>Data
                         </div>
                         <div className={layoutStyles.pillButton}>
-                            <FontAwesomeIcon fixedWidth icon={faRobot}/>&nbsp;&nbsp;Automation
+                            <FontAwesomeIcon fixedWidth icon={faRobot}/>Automation
                         </div>
                         <div className={layoutStyles.pillButton}>
-                            <FontAwesomeIcon fixedWidth icon={faClock}/>&nbsp;&nbsp;Idling
+                            <FontAwesomeIcon fixedWidth icon={faClock}/>Idling
                         </div>
                         <div className={layoutStyles.pillButton}>
-                            <FontAwesomeIcon fixedWidth icon={faAtom}/>&nbsp;&nbsp;Details
+                            <FontAwesomeIcon fixedWidth icon={faAtom}/>Details
                         </div>
                     </div>     
                 </div>
