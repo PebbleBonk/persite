@@ -60,7 +60,6 @@ const Article = ({ data, pageContext }) => {
     </div>
     )
 
-    console.log("WEBSITE:", pageContext)
     const websiteLink = (pageContext.website === "none") ? null : (
         <div className={articleStyles.repoLink}>
             <span>
@@ -69,14 +68,15 @@ const Article = ({ data, pageContext }) => {
             </span>
         </div>
     )
-    console.log("WEBSITELINK:", websiteLink)
 
     return (
         <Layout>
-            <div className={articleStyles.articleWrapper}>
+            <div className={articleStyles.articleWrapper} >
                 {navWrap}
-                <div className={articleStyles.navSeparator} id="article-content"/>
+                {/* <div className={articleStyles.navSeparator} id="article-content"/> */}
+                
                 <div className={articleStyles.article}>
+                    <span  id="article-content">&nbsp;</span>
                     <Img className={articleStyles.coverImg} fluid={data.markdownRemark.frontmatter.cover.childImageSharp.fluid} alt={data.markdownRemark.frontmatter.title}/>
                     <h1>{data.markdownRemark.frontmatter.title}</h1>
                     <p className={articleStyles.date}>{data.markdownRemark.frontmatter.date}</p>
