@@ -90,7 +90,7 @@ const Article = ({ data, pageContext }) => {
                     </div>
                     {websiteLink}
                     
-                    <div dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}></div>
+                    <div className={articleStyles.content} dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}></div>
                 </div>
 
                 {navWrap}
