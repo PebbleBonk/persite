@@ -5,7 +5,7 @@ import { Link, graphql } from 'gatsby'
 import Img from "gatsby-image"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLongArrowAltLeft, faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
+import { faLongArrowAltLeft, faLongArrowAltRight, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import articleStyles from './article.module.scss'
@@ -60,6 +60,17 @@ const Article = ({ data, pageContext }) => {
     </div>
     )
 
+    console.log("WEBSITE:", pageContext)
+    const websiteLink = (pageContext.website === "none") ? null : (
+        <div className={articleStyles.repoLink}>
+            <span>
+                <FontAwesomeIcon icon={faExternalLinkAlt}/>
+                <a href={pageContext.website}>{pageContext.website}</a>
+            </span>
+        </div>
+    )
+    console.log("WEBSITELINK:", websiteLink)
+
     return (
         <Layout>
             <div className={articleStyles.articleWrapper}>
@@ -69,12 +80,15 @@ const Article = ({ data, pageContext }) => {
                     <Img className={articleStyles.coverImg} fluid={data.markdownRemark.frontmatter.cover.childImageSharp.fluid} alt={data.markdownRemark.frontmatter.title}/>
                     <h1>{data.markdownRemark.frontmatter.title}</h1>
                     <p className={articleStyles.date}>{data.markdownRemark.frontmatter.date}</p>
+                    
                     <div className={articleStyles.repoLink}>
                         <span>
                             <FontAwesomeIcon icon={faGithub}/>
                             <a href={pageContext.githubLInk}>{pageContext.slug}</a>
                         </span>
                     </div>
+                    {websiteLink}
+                    
                     <div dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}></div>
                 </div>
 

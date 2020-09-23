@@ -4,6 +4,7 @@ date: "1.7.2020"
 cover: ./tmm_cover.jpeg
 thumbnail: ./tmm_logo.png
 githubLink: https://www.github.com/PebbleBonk/TexMindMapper
+website: tex-mind-mapper.herokuapp.com
 ---
 
 >Writing your thesis. Ah what a task! Like probably many of us, I also encountered a point where comprehending the entire scope of the thesis was overflowing to every umaginable direction. I wanted - no, needed - a way to visualise what I was doing. Being as lazy as I am, I did not want to have a mindmap that I had to manually update every time I made changes to the thesis structure. It had to be automated.
