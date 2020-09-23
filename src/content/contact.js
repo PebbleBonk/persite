@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import layoutStyles from '../styles/layout.module.scss'
-
 
 const ContentOfContact = () => {
     return (
