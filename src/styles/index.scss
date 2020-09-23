@@ -38,6 +38,10 @@ h2 {
     font-size: 28px;
 }
 
+p {
+    max-width: 500px;
+}
+
 article,
 aside,
 details,
@@ -70,11 +74,6 @@ summary {
 a {
     // color: rgb(214, 221, 221);
     color: #dbe5ff;
-}
-
-// Links to personal github:
-a[href^="http://github.com/PebbleBonk/"] {
-    /* fully valid URL, likely external link */
 }
 
 
