@@ -27,10 +27,11 @@
 
 .article {
     background-color: white;
+    // color: white;
     
     // margin-top: 2rem;
     padding: 2.5rem;
-    box-shadow: 1rem 1rem 2rem 1rem rgba(0,0,0,0.5);
+    box-shadow: 1rem 3rem 2rem 1rem rgba(0,0,0,0.5);
     
     // Real good resource:
     // https://css-tricks.com/hash-tag-links-padding/
@@ -79,6 +80,10 @@
         text-align: justify;
     }
 
+    a {
+        color: #5FA2BB;
+    }
+
     blockquote {
         color: #888;
         border-top: 1px solid #888;
@@ -96,8 +101,8 @@
 
     }
 
-    .content {
-        padding-top: 2rem;
+    hr {
+        margin-top: 3rem;
     }
 
     img {
@@ -107,7 +112,30 @@
     table {
         margin-left: auto;
         margin-right: auto;
-      }
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+        border-collapse: collapse;
+
+        th {
+            color: white;
+            background-color: #2D2D2D;
+            padding: 0.2rem;
+        }
+        td {
+            padding: 0.1rem 0.5rem;
+        }
+    }
+
+    table, th, td {
+        border: 1px solid rgb(138, 138, 138);
+        border-radius: 10%;
+    }
+      
+    .content {
+        padding-top: 2rem;
+    }
+
+
 
 }
 
@@ -121,7 +149,7 @@
     margin: auto;
     padding-top: 1rem;
     padding-bottom: 1rem;
-
+    // box-shadow: 0rem -2rem 2rem 1rem rgba(0,0,0,0.5);
     a {
         text-decoration: none;
         font-size: 0.9rem;
