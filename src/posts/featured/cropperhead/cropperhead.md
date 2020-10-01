@@ -196,11 +196,7 @@ However, as one obviously can tell, the resulting crops are rather, well, open f
 It would be indeed interesting to have a comparison of the different methods: one image, cropped by a human, a trained CNN and a random generator with sensible limits. Would a person be able to tell a difference? What would it prefer? Could they be improved? Could any of these systems learn from each other? Is there something to be learnt from the expression "beauty is in th eye of the beholder?" 
 
 
-|                  |                  |  
-| ---------------- | ---------------- |
-| ![Prediction 1](./pred1.png) | ![Prediction 2](./pred2.png) |
-| ![Prediction 3](./pred3.png) | ![Prediction 4](./pred4.png) |
-
+![Prediction 3](./pred_collage.png) 
 *Some example predictions.*
 
 ---

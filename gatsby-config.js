@@ -61,6 +61,7 @@ module.exports = {
               linkImagesToOriginal: false
             }
           },
+          'gatsby-remark-static-images',
           {
             resolve: `gatsby-remark-prismjs`,
             options: {
