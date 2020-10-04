@@ -2,6 +2,8 @@
 # Exclude large iamge files:
 resources/img
 
+# Exclude vscode files:
+.vscode
 
 # ------------ Template ---------------
 
