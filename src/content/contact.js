@@ -1,8 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-import layoutStyles from '../styles/layout.module.scss'
-
 
 const ContentOfContact = () => {
     return (
@@ -11,8 +9,9 @@ const ContentOfContact = () => {
                 <h2  data-sal="slide-up" data-sal-easing="ease">Wanna know me better?</h2>
                 <p  data-sal="slide-up" data-sal-easing="ease">Nice.</p>
                 <p  data-sal="slide-up" data-sal-easing="ease">
-                    You can find more information of my education and work experience on my
-                    LinkedIn profile.
+                    You can find more information of my education and work experience on 
+                    my <a href="/404">LinkedIn</a> profile. More projects and source code you 
+                    can find in my <a href="https:www.github.com/PebbleBonk">GitHub</a>.
                 </p>
                 <p  data-sal="slide-up" data-sal-easing="ease">
                     If you want more details or are interested in discussing some project,

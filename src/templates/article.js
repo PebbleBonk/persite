@@ -5,7 +5,8 @@ import { Link, graphql } from 'gatsby'
 import Img from "gatsby-image"
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faLongArrowAltLeft, faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons'
+import { faLongArrowAltLeft, faLongArrowAltRight, faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import { faGithub } from '@fortawesome/free-brands-svg-icons'
 
 import articleStyles from './article.module.scss'
 
@@ -47,7 +48,8 @@ const Article = ({ data, pageContext }) => {
             )}
         </div>
         <div className={articleStyles.navBack}>
-            <Link to="/#projects">Home</Link>
+            {/* <Link to="/#projects">Home</Link> */}
+            <a href="/#projects">Home</a>
         </div>
         <div className={articleStyles.navNext}>
             {next && (
@@ -59,16 +61,36 @@ const Article = ({ data, pageContext }) => {
     </div>
     )
 
+    const websiteLink = (pageContext.website === "none") ? null : (
+        <div className={articleStyles.repoLink}>
+            <span>
+                <FontAwesomeIcon icon={faExternalLinkAlt}/>
+                <a href={pageContext.website}>{pageContext.website}</a>
+            </span>
+        </div>
+    )
+
     return (
         <Layout>
-            <div className={articleStyles.articleWrapper}>
+            <div className={articleStyles.articleWrapper} >
                 {navWrap}
-                <div className={articleStyles.navSeparator} id="article-content"/>
+                {/* <div className={articleStyles.navSeparator} id="article-content"/> */}
+                
                 <div className={articleStyles.article}>
+                    <span  id="article-content">&nbsp;</span>
                     <Img className={articleStyles.coverImg} fluid={data.markdownRemark.frontmatter.cover.childImageSharp.fluid} alt={data.markdownRemark.frontmatter.title}/>
                     <h1>{data.markdownRemark.frontmatter.title}</h1>
                     <p className={articleStyles.date}>{data.markdownRemark.frontmatter.date}</p>
-                    <div dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}></div>
+                    
+                    <div className={articleStyles.repoLink}>
+                        <span>
+                            <FontAwesomeIcon icon={faGithub}/>
+                            <a href={pageContext.githubLInk}>{pageContext.slug}</a>
+                        </span>
+                    </div>
+                    {websiteLink}
+                    
+                    <div className={articleStyles.content} dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}></div>
                 </div>
 
                 {navWrap}
