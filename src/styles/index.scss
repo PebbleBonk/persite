@@ -38,6 +38,10 @@ h2 {
     font-size: 28px;
 }
 
+p {
+    max-width: 500px;
+}
+
 article,
 aside,
 details,
@@ -71,6 +75,7 @@ a {
     // color: rgb(214, 221, 221);
     color: #dbe5ff;
 }
+
 
 .hero-scroll {
     color: white;

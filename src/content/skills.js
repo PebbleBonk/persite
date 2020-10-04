@@ -6,7 +6,7 @@ import { faTools, faMicrochip} from '@fortawesome/free-solid-svg-icons'
 
 const SkillList = (props) => {
     return (
-        <div style={{padding:"1rem", width: "230px", boxSizing: "border-box"}}
+        <div style={{padding:"1rem", width: "180px", boxSizing: "border-box"}}
             data-sal="slide-up" data-sal-delay="300" data-sal-easing="ease">
             {props.children}
         </div>

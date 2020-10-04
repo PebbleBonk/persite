@@ -91,7 +91,7 @@ const IndexPage = () => {
                         <ContentOfSkills/>
                     </Section>
                 
-                    <Section title='Projects' id='projects' img={imgs[img_idx[2]]} style={sectionStyles.projects} solid={true}>
+                    <Section title='Projects' id='projects' img={imgs[img_idx[2]]} style={sectionStyles.projects} centered={false} solid={true}>
                         <ContentOfProjects/>
                     </Section>
                 
