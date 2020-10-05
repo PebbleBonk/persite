@@ -38,14 +38,14 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'featured',
-        path: path.join(__dirname, 'src', 'posts', 'featured')
+        path: path.join(__dirname, 'articles', 'featured')
       }
     },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'projects',
-        path: path.join(__dirname, 'src', 'posts', 'projects')
+        path: path.join(__dirname, 'articles', 'normal')
       }
     },
     {
