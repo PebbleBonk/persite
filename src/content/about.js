@@ -43,15 +43,15 @@ const ContentOfAbout = () => {
                         data-sal-easing="ease">
                         <p>A broad-skilled software engineer!</p>
                         <p>
-                            Originating from eastern Finland, and currently based in Espoo.
+                            Originates from eastern Finland, and currently based in Espoo.
                         </p>
                         <p>
                             I like to work with things that are new: venturing to places which seem 
-                            just out-of-reach and trying to find those real-life cheat codes are tasks 
+                            just out-of-reach and seeking those real-life cheat codes are tasks 
                             that bring out the best in me.
                         </p>
                         <p>
-                            Especially the following inspire me:
+                            Topics that especially interest me:
                         </p>
                     </div>
                     <div>
