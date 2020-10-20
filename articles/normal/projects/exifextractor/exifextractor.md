@@ -3,8 +3,9 @@ title: "ExifExtractor - Find your edits"
 date: "1.6.2020"
 cover: ee.jpg
 thumbnail: ee_logo.png
-githubLink: https://www.github.com/PebbleBonk/ExifAnnotator
-website: none
+links: [
+    https://www.github.com/PebbleBonk/ExifAnnotator
+]
 ---
 
 
