@@ -40,7 +40,7 @@ const IndexPage = () => {
                         base
                         publicURL
                         childImageSharp {
-                            fluid (maxWidth: 1500 , maxHeight: 1500 ) {
+                            fluid (maxWidth: 1980 , maxHeight: 1980 ) {
                                 ...GatsbyImageSharpFluid
                             }
                         }
@@ -63,7 +63,8 @@ const IndexPage = () => {
     
     
     // Randomly select images for the sections:
-    const img_idx = RandSet(0, imgs.length-1, 4)
+    const img_idx = [4,0,0,0] //RandSet(0, imgs.length-1, 4)
+
     const sections = [
         {id: '', slug: 'home'},
         {id: 'About', slug: 'about'},
