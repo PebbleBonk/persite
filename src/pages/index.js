@@ -8,7 +8,7 @@ import Head from '../components/head'
 import Section from '../sections/section'
 
 // Utilities:
-import { RandSet } from '../utilities/utils'
+// import { RandSet } from '../utilities/utils'
 
 // Styles:
 import '../styles/index.scss'
