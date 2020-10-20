@@ -3,8 +3,10 @@ title: "PyTexTree - LaTeX Trees!"
 date: "1.1.2020"
 cover: ./tree.jpg
 thumbnail: ./logo.png
-githubLink: https://www.github.com/PebbleBonk/pytextree
-website: https://pypi.org/project/pytextree/
+links: [
+	https://www.github.com/PebbleBonk/pytextree,
+	https://pypi.org/project/pytextree/
+]
 ---
 
 >As explained in the [TexMindMapper post](/projects/texmindmapper), I wanted to visualise my thesis as a mind map, or any other logical structure for that matter. Naturally, to achieve visualisation, one needs a clearly defined structure, which hopefully also is logical and easily accessible. In other words, I needed a way to convert the text in my thesis written in LaTeX, into something a bit more data-analysis friendly.

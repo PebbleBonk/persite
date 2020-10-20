@@ -23,7 +23,7 @@ $textColor: white;
 
 .fullNavAndFooter {
     min-height: calc(#{$sectionHeight} - #{$navbar-height} - #{$footer-height});
-    max-height: calc(#{$sectionHeight} - #{$navbar-height} - #{$footer-height});
+    // max-height: calc(#{$sectionHeight} - #{$navbar-height} - #{$footer-height});
 }
 // Basic styles for the section:
 .parallax {

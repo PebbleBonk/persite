@@ -24,7 +24,7 @@ const ContentOfSkills = () => {
                 </p>
             </div>
 
-            <div style={{display: "flex", flexWrap: "wrap"}}>
+            <div style={{display: "flex", flexWrap: "wrap", justifyContent: "center"}}>
                 <SkillList>
                         <b> <FontAwesomeIcon icon={faLanguage}/>Languages:</b>
                         <ul>
