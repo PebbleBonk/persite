@@ -3,8 +3,11 @@ title: "CropperHead - auto cropper AI"
 date: "1.6.2020"
 cover: ch_cover.jpg
 thumbnail: cropperHead.png
-githubLink: https://www.github.com/PebbleBonk/CropperHead
-website: https://cropper-head.herokuapp.com
+links: [
+    https://www.github.com/PebbleBonk/CropperHead,
+    https://www.github.com/PebbleBonk/CropperHeadUI,
+    https://cropper-head.herokuapp.com
+]
 ---
 
 
