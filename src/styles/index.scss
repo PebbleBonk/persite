@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Trirong:ital,wght@1,800&display=swap");
+// @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+// @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap");
+// @import url("https://fonts.googleapis.com/css2?family=Trirong:ital,wght@1,800&display=swap");
 // @import url("https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Pridi:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Catamaran:wght@300&&display=swap");
 
 html {
     font-family: 'Raleway', sans-serif;
@@ -14,10 +15,12 @@ body {
     min-width: 320px;
     width: 320px;
     width: auto !important;
-    font-family: 'Raleway', sans-serif;
+    // font-family: 'Raleway', sans-serif;
+    font-family: 'Catamaran', sans-serif;
+    line-height: 1.2;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    font-size: 14px;
+    font-size: 16px;
     background-color: #222;
 }
 
