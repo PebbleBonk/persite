@@ -10,7 +10,7 @@ const ContentOfContact = () => {
             <p  data-sal="slide-up" data-sal-easing="ease">Nice.</p>
             <p  data-sal="slide-up" data-sal-easing="ease">
                 You can find more information of my education and work experience on 
-                my <Link to="https://www.linkedin.com/in/olli-riikonen-0b8a2681/">LinkedIn</Link> profile. More projects and source code you 
+                my <a href="https://www.linkedin.com/in/olli-riikonen-0b8a2681/">LinkedIn</a> profile. More projects and source code you 
                 can find in my <a href="https://github.com/pebblebonk">GitHub</a>.
             </p>
             <p  data-sal="slide-up" data-sal-easing="ease">

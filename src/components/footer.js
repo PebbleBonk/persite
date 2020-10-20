@@ -12,7 +12,7 @@ const Footer = () => {
         <footer className={footerStyles.footer}>
             <span><a href='https://github.com/pebblebonk/persite'><FontAwesomeIcon icon={faGithub} /> </a></span>
             <span>&copy; 2020 Olli Riikonen</span>
-            <span><Link to='https://www.linkedin.com/in/olli-riikonen-0b8a2681/'><FontAwesomeIcon icon={faLinkedin} /> </Link></span>
+            <span><a href='https://www.linkedin.com/in/olli-riikonen-0b8a2681/'><FontAwesomeIcon icon={faLinkedin} /> </a></span>
         </footer>
     )
 }
