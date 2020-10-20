@@ -61,15 +61,6 @@ const Article = ({ data, pageContext }) => {
     </div>
     )
 
-    // const websiteLink = (pageContext.website === "none") ? null : (
-    //     <div className={articleStyles.repoLink}>
-    //         <span>
-    //             <FontAwesomeIcon icon={faExternalLinkAlt}/>
-    //             <a href={pageContext.website}>{pageContext.website}</a>
-    //         </span>
-    //     </div>
-    // )
-
     // Create links for the given websites:
     const projectLinks = (
         <React.Fragment>
@@ -111,14 +102,7 @@ const Article = ({ data, pageContext }) => {
                     <p className={articleStyles.date}>{data.markdownRemark.frontmatter.date}</p>
                     
                     {projectLinks}
-                    {/* <div className={articleStyles.repoLink}>
-                        <span>
-                            <FontAwesomeIcon icon={faGithub}/>
-                            <a href={pageContext.githubLInk}>{pageContext.slug}</a>
-                        </span>
-                    </div>
-                    {websiteLink} */}
-                    
+
                     <div className={articleStyles.content} dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}></div>
                 </div>
 
