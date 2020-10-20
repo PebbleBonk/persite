@@ -61,14 +61,42 @@ const Article = ({ data, pageContext }) => {
     </div>
     )
 
-    const websiteLink = (pageContext.website === "none") ? null : (
-        <div className={articleStyles.repoLink}>
-            <span>
-                <FontAwesomeIcon icon={faExternalLinkAlt}/>
-                <a href={pageContext.website}>{pageContext.website}</a>
-            </span>
-        </div>
+    // const websiteLink = (pageContext.website === "none") ? null : (
+    //     <div className={articleStyles.repoLink}>
+    //         <span>
+    //             <FontAwesomeIcon icon={faExternalLinkAlt}/>
+    //             <a href={pageContext.website}>{pageContext.website}</a>
+    //         </span>
+    //     </div>
+    // )
+
+    // Create links for the given websites:
+    const projectLinks = (
+        <React.Fragment>
+            {pageContext.links.map((link) => {
+                let linkIcon
+                let linkSlug  // A bit hacky slug creations, could be nicer
+                if (link.includes('github.com/')) {
+                    linkIcon = faGithub
+                    linkSlug = link.split("github.com/")[1]
+                } else {
+                    linkIcon = faExternalLinkAlt
+                    linkSlug = link.split("://")[1]
+                }
+
+                return (
+                    <div className={articleStyles.repoLink} key={linkSlug}>
+                        <span>
+                            <FontAwesomeIcon icon={linkIcon}/>
+                            <a href={link}>{linkSlug}</a>
+                        </span>
+                    </div>
+                )
+            })}
+        </React.Fragment>
     )
+    
+
 
     return (
         <Layout>
@@ -82,13 +110,14 @@ const Article = ({ data, pageContext }) => {
                     <h1>{data.markdownRemark.frontmatter.title}</h1>
                     <p className={articleStyles.date}>{data.markdownRemark.frontmatter.date}</p>
                     
-                    <div className={articleStyles.repoLink}>
+                    {projectLinks}
+                    {/* <div className={articleStyles.repoLink}>
                         <span>
                             <FontAwesomeIcon icon={faGithub}/>
                             <a href={pageContext.githubLInk}>{pageContext.slug}</a>
                         </span>
                     </div>
-                    {websiteLink}
+                    {websiteLink} */}
                     
                     <div className={articleStyles.content} dangerouslySetInnerHTML={{__html: data.markdownRemark.html}}></div>
                 </div>
