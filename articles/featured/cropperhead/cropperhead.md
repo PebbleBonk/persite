@@ -4,7 +4,7 @@ date: "1.6.2020"
 cover: ch_cover.jpg
 thumbnail: cropperHead.png
 githubLink: https://www.github.com/PebbleBonk/CropperHead
-website: cropper-head.herokuapp.com
+website: https://cropper-head.herokuapp.com
 ---
 
 
