@@ -85,6 +85,16 @@
         text-align: justify;
     }
 
+    li {
+        font-family: 'Catamaran', sans-serif;
+        font-size: 1rem;
+        p {
+            max-width: none;
+            margin-top: auto;
+            margin-bottom: auto;
+            font-size: inherit;
+        }
+    }
     a {
         color: #5FA2BB;
     }
