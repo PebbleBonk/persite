@@ -63,7 +63,7 @@ const IndexPage = () => {
     
     
     // Randomly select images for the sections:
-    const img_idx = [4,0,0,0] //RandSet(0, imgs.length-1, 4)
+    const img_idx = [4,0,2,0] //RandSet(0, imgs.length-1, 4)
 
     const sections = [
         {id: '', slug: 'home'},
