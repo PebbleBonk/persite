@@ -15,7 +15,7 @@ const ContentOfContact = () => {
             </p>
             <p  data-sal="slide-up" data-sal-easing="ease">
                 If you want more details or are interested in discussing some project,
-                please toss me a message at <a href="mailto:pebblebonk@gmail.com">pebblebonk@gmail.com</a>
+                please toss me a message at <a href="mailto:olli@ornor.dev">olli@ornor.dev</a>
             </p>
         </div>
     )
